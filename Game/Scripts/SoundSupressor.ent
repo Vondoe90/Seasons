@@ -1,4 +1,0 @@
-<Entity
- Name="SoundSupressor"
- Script="Scripts/Entities/Others/SoundSupressor.lua"
-/>

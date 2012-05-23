@@ -1,4 +1,0 @@
-<Entity
- Name="IKTurnWheel"
- Script="Scripts/Entities/IKObjects/IKTurnWheel.lua" 
-/>

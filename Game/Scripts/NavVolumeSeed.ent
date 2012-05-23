@@ -1,5 +1,0 @@
-<Entity
- Name="NavVolumeSeed"
- Script="Scripts/Entities/AI/NavVolumeSeed.lua" 
- Invisible="1"
-/>

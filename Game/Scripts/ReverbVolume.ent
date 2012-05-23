@@ -1,4 +1,0 @@
-<Entity
- Name="ReverbVolume"
- Script="Scripts/Entities/Sound/ReverbVolume.lua"
-/>

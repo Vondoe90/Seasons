@@ -1,4 +1,0 @@
-<Entity
-	Name="Fog"
-	Script="Scripts/Entities/Render/Fog.lua"
-/>

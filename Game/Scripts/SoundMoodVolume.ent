@@ -1,4 +1,0 @@
-<Entity
- Name="SoundMoodVolume"
- Script="Scripts/Entities/Sound/SoundMoodVolume.lua"
-/>

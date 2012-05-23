@@ -1,5 +1,0 @@
-<Entity
- Name="BasicIKObject"
- Script="Scripts/Entities/IKObjects/BasicIKObject.lua" 
- Invisible="1"
-/>

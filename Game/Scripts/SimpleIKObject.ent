@@ -1,4 +1,0 @@
-<Entity
- Name="SimpleIKObject"
- Script="Scripts/Entities/IKObjects/SimpleIKObject.lua" 
-/>

@@ -1,4 +1,0 @@
-<Entity
- Name="AICheckInBox" 
- Script="Scripts/Entities/Triggers/AICheckInBox.lua"
-/>

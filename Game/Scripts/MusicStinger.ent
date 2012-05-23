@@ -1,4 +1,0 @@
-<Entity
- Name="MusicStinger"
- Script="Scripts/Entities/Sound/MusicStinger.lua"
-/>

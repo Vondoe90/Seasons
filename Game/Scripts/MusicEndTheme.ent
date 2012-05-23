@@ -1,4 +1,0 @@
-<Entity
- Name="MusicEndTheme"
- Script="Scripts/Entities/Sound/MusicEndTheme.lua"
-/>

@@ -1,4 +1,0 @@
-<Entity
- Name="VisRegPoint"
- Script="Scripts/Entities/Others/VisRegPoint.lua" 
-/>

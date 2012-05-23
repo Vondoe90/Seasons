@@ -1,4 +1,0 @@
-<Entity
-	Name="FireParticle"
-	Script="Scripts/Entities/Fires/FireParticle.lua"
-/>
