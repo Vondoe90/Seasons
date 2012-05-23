@@ -11,7 +11,6 @@
 
 *************************************************************************/
 #include "StdAfx.h"
-#include "ScriptBind_GameRules.h"
 #include "GameRules.h"
 #include "Game.h"
 #include "GameCVars.h"
@@ -60,6 +59,7 @@ CGameRules::CGameRules()
 	m_pMaterialManager(0),
 	m_onCollisionFunc(0),
 	m_pClientNetChannel(0),
+	m_pScriptClass(0),
 	m_teamIdGen(0),
 	m_hitMaterialIdGen(0),
 	m_hitTypeIdGen(0),
@@ -156,7 +156,10 @@ bool CGameRules::Init( IGameObject * pGameObject )
 	m_scriptExplosionInfo->SetValue("AffectedEntitiesObstruction", affectedObstruction);
   
 	m_pGameFramework->GetIGameRulesSystem()->SetCurrentGameRules(this);
-	g_pGame->GetGameRulesScriptBind()->AttachTo(this);
+	//g_pGame->GetGameRulesScriptBind()->AttachTo(this);
+
+	SAFE_RELEASE(m_pScriptClass);
+	m_pScriptClass = gEnv->pMonoScriptSystem->InstantiateScript(GetEntity()->GetClass()->GetName(), eScriptType_GameRules);
 
 	// setup animation time scaling (until we have assets that cover the speeds we need timescaling).
 	if (gEnv->pCharacterManager)
@@ -504,7 +507,8 @@ bool CGameRules::ShouldKeepClient(int channelId, EDisconnectionCause cause, cons
 //------------------------------------------------------------------------
 void CGameRules::PrecacheLevel()
 {
-	CallScript(m_script, "PrecacheLevel");
+	//CallScript(m_script, "PrecacheLevel");
+	CallMonoScript<void>(m_pScriptClass, "PrecacheLevel");
 }
 
 //------------------------------------------------------------------------
@@ -512,7 +516,8 @@ void CGameRules::OnConnect(struct INetChannel *pNetChannel)
 {
 	m_pClientNetChannel=pNetChannel;
 
-	CallScript(m_clientStateScript,"OnConnect");
+	//CallScript(m_clientStateScript,"OnConnect");
+	CallMonoScript<void>(m_pScriptClass, "OnConnect");
 }
 
 
@@ -520,8 +525,9 @@ void CGameRules::OnConnect(struct INetChannel *pNetChannel)
 void CGameRules::OnDisconnect(EDisconnectionCause cause, const char *desc)
 {
 	m_pClientNetChannel=0;
-	int icause=(int)cause;
-	CallScript(m_clientStateScript, "OnDisconnect", icause, desc);
+	//int icause=(int)cause;
+	//CallScript(m_clientStateScript, "OnDisconnect", icause, desc);
+	CallMonoScript<void>(m_pScriptClass, "OnDisconnect", cause, desc);
 }
 
 //------------------------------------------------------------------------
@@ -533,18 +539,7 @@ bool CGameRules::OnClientConnect(int channelId, bool isReset)
 		g_pGame->GetServerSynchedStorage()->OnClientConnect(channelId);
 	}
 
-	if (gEnv->bServer && gEnv->bMultiplayer)
-	{
-		string playerName = GetPlayerName(channelId, true);
-    if(!playerName.empty())
-			CallScript(m_serverStateScript, "OnClientConnect", channelId, isReset, playerName.c_str());
-    else
-			CallScript(m_serverStateScript, "OnClientConnect", channelId, isReset);
-	}
-	else
-	{
-		CallScript(m_serverStateScript, "OnClientConnect", channelId);
-	}
+	CallMonoScript<void>(m_pScriptClass, "OnClientConnect", channelId, isReset, GetPlayerName(channelId, true).c_str());
 
 	CActor *pActor=GetActorByChannelId(channelId);
 	if (pActor)
@@ -612,7 +607,8 @@ void CGameRules::OnClientDisconnect(int channelId, EDisconnectionCause cause, co
 	if (channelit!=m_channelIds.end())
 		m_channelIds.erase(channelit);
 
-	CallScript(m_serverStateScript, "OnClientDisconnect", channelId);
+	//CallScript(m_serverStateScript, "OnClientDisconnect", channelId);
+	CallMonoScript<void>(m_pScriptClass, "OnClientDisconnect", channelId);
 
 	return;
 }
@@ -632,8 +628,10 @@ bool CGameRules::OnClientEnteredGame(int channelId, bool isReset)
 		g_pGame->GetServerSynchedStorage()->OnClientEnteredGame(channelId);
 
 	IScriptTable *pPlayer=pActor->GetEntity()->GetScriptTable();
-	int loadingSaveGame=m_pGameFramework->IsLoadingSaveGame()?1:0;
-	CallScript(m_serverStateScript, "OnClientEnteredGame", channelId, pPlayer, isReset, loadingSaveGame);
+	//int loadingSaveGame=m_pGameFramework->IsLoadingSaveGame()?1:0;
+	//CallScript(m_serverStateScript, "OnClientEnteredGame", channelId, pPlayer, isReset, loadingSaveGame);
+
+	CallMonoScript<void>(m_pScriptClass, "OnClientEnteredGame", channelId, pActor->GetEntityId(), isReset, m_pGameFramework->IsLoadingSaveGame());
 
 	// don't do this on reset - have already been added to correct team!
 	if(!isReset || GetTeamCount() < 2)
@@ -663,17 +661,21 @@ void CGameRules::OnEntityRemoved(IEntity *pEntity)
 //------------------------------------------------------------------------
 void CGameRules::OnItemDropped(EntityId itemId, EntityId actorId)
 {
-	ScriptHandle itemIdHandle(itemId);
-	ScriptHandle actorIdHandle(actorId);
-	CallScript(m_serverStateScript, "OnItemDropped", itemIdHandle, actorIdHandle);
+	//ScriptHandle itemIdHandle(itemId);
+	//ScriptHandle actorIdHandle(actorId);
+	//CallScript(m_serverStateScript, "OnItemDropped", itemIdHandle, actorIdHandle);
+
+	CallMonoScript<void>(m_pScriptClass, "OnItemDropped", itemId, actorId);
 }
 
 //------------------------------------------------------------------------
 void CGameRules::OnItemPickedUp(EntityId itemId, EntityId actorId)
 {
-	ScriptHandle itemIdHandle(itemId);
-	ScriptHandle actorIdHandle(actorId);
-	CallScript(m_serverStateScript, "OnItemPickedUp", itemIdHandle, actorIdHandle);
+	//ScriptHandle itemIdHandle(itemId);
+	//ScriptHandle actorIdHandle(actorId);
+	//CallScript(m_serverStateScript, "OnItemPickedUp", itemIdHandle, actorIdHandle);
+
+	CallMonoScript<void>(m_pScriptClass, "OnItemPickedUp", itemId, actorId);
 }
 
 //------------------------------------------------------------------------
@@ -728,9 +730,11 @@ void CGameRules::OnChatMessage(EChatMessageType type, EntityId sourceId, EntityI
 //------------------------------------------------------------------------
 void CGameRules::OnRevive(CActor *pActor, const Vec3 &pos, const Quat &rot, int teamId)
 {
-	ScriptHandle handle(pActor->GetEntityId());
-	Vec3 rotVec = Vec3(Ang3(rot));
-	CallScript(m_clientScript, "OnRevive", handle, pos, rotVec, teamId);
+	//ScriptHandle handle(pActor->GetEntityId());
+	//Vec3 rotVec = Vec3(Ang3(rot));
+	//CallScript(m_clientScript, "OnRevive", handle, pos, rotVec, teamId);
+
+	CallMonoScript<void>(m_pScriptClass, "OnRevive", pActor->GetEntityId(), pos, Ang3(rot), teamId);
 }
 
 //------------------------------------------------------------------------
@@ -738,8 +742,10 @@ void CGameRules::OnKill(CActor *pActor, EntityId shooterId, const char *weaponCl
 {
 	NOTIFY_UI_MP( PlayerKilled(pActor->GetEntityId(), shooterId) );
 
-	ScriptHandle handleEntity(pActor->GetEntityId()), handleShooter(shooterId);
-	CallScript(m_clientStateScript, "OnKill", handleEntity, handleShooter, weaponClassName, damage, material, hit_type);
+	//ScriptHandle handleEntity(pActor->GetEntityId()), handleShooter(shooterId);
+	//CallScript(m_clientStateScript, "OnKill", handleEntity, handleShooter, weaponClassName, damage, material, hit_type);
+
+	CallMonoScript<void>(m_pScriptClass, "OnKill", pActor->GetEntityId(), shooterId, weaponClassName, damage, material, hit_type);
 }
 
 //------------------------------------------------------------------------
@@ -747,9 +753,11 @@ void CGameRules::OnReviveInVehicle(CActor *pActor, EntityId vehicleId, int seatI
 {
 	SGameObjectEvent evt(eCGE_ActorRevive,eGOEF_ToAll, IGameObjectSystem::InvalidExtensionID, (void*)pActor);
 	
-	ScriptHandle handle(pActor->GetEntityId());
-	ScriptHandle vhandle(pActor->GetEntityId());
-	CallScript(m_clientScript, "OnReviveInVehicle", handle, vhandle, seatId, teamId);
+	//ScriptHandle handle(pActor->GetEntityId());
+	//ScriptHandle vhandle(pActor->GetEntityId());
+	//CallScript(m_clientScript, "OnReviveInVehicle", handle, vhandle, seatId, teamId);
+
+	CallMonoScript<void>(m_pScriptClass, "OnReviveInVehicle", pActor->GetEntityId(), vehicleId, seatId, teamId);
 }
 
 //------------------------------------------------------------------------
@@ -757,24 +765,28 @@ void CGameRules::OnVehicleDestroyed(EntityId id)
 {
 	RemoveMinimapEntity(id);
 	RemoveSpawnGroup(id);
-
+	/*
 	if (gEnv->bServer)
 		CallScript(m_serverScript, "OnVehicleDestroyed", ScriptHandle(id));
 
 	if (gEnv->IsClient())
-		CallScript(m_clientScript, "OnVehicleDestroyed", ScriptHandle(id));
+		CallScript(m_clientScript, "OnVehicleDestroyed", ScriptHandle(id));*/
+
+	CallMonoScript<void>(m_pScriptClass, "OnVehicleDestroyed", id);
 }
 
 //------------------------------------------------------------------------
 void CGameRules::OnVehicleSubmerged(EntityId id, float ratio)
 {
 	RemoveSpawnGroup(id);
-
+	/*
 	if (gEnv->bServer)
 		CallScript(m_serverScript, "OnVehicleSubmerged", ScriptHandle(id), ratio);
 
 	if (gEnv->IsClient())
-		CallScript(m_clientScript, "OnVehicleSubmerged", ScriptHandle(id), ratio);
+		CallScript(m_clientScript, "OnVehicleSubmerged", ScriptHandle(id), ratio);*/
+
+	CallMonoScript<void>(m_pScriptClass, "OnVehicleSubmerged", id, ratio);
 }
 
 //------------------------------------------------------------------------
@@ -819,9 +831,11 @@ void CGameRules::AddTaggedEntity(EntityId shooter, EntityId targetId, bool tempo
 	}
 
 	// add PP and CP for tagging this entity
-	ScriptHandle shooterHandle(shooter);
-	ScriptHandle targetHandle(targetId);
-	CallScript(m_serverScript, "OnAddTaggedEntity", shooterHandle, targetHandle);
+	//ScriptHandle shooterHandle(shooter);
+	//ScriptHandle targetHandle(targetId);
+	//CallScript(m_serverScript, "OnAddTaggedEntity", shooterHandle, targetHandle);
+
+	CallMonoScript<void>(m_pScriptClass, "OnAddTaggedEntity", shooter, targetId);
 }
 
 //------------------------------------------------------------------------
@@ -1165,9 +1179,11 @@ void CGameRules::ChangeSpectatorMode(CActor *pActor, uint8 mode, EntityId target
 
 	if (gEnv->bServer)
 	{
-		ScriptHandle handle(params.entityId);
-		ScriptHandle target(targetId);
-		CallScript(m_serverStateScript, "OnChangeSpectatorMode", handle, mode, target, resetAll);
+		//ScriptHandle handle(params.entityId);
+		//ScriptHandle target(targetId);
+		//CallScript(m_serverStateScript, "OnChangeSpectatorMode", handle, mode, target, resetAll);
+
+		CallMonoScript<void>(m_pScriptClass,"OnChangeSpectatorMode", params.entityId, mode, targetId, resetAll);
     m_pGameplayRecorder->Event(pActor->GetEntity(), GameplayEvent(eGE_Spectator, 0, (float)mode));
 	}
 	else if (pActor->GetEntityId() == m_pGameFramework->GetClientActor()->GetEntityId())
@@ -1182,8 +1198,10 @@ void CGameRules::RequestNextSpectatorTarget(CActor* pActor, int change)
 
 	if(gEnv->bServer && pActor)
 	{
-		ScriptHandle playerId(pActor->GetEntityId());
-		CallScript(m_serverStateScript, "RequestSpectatorTarget", playerId, change);
+		//ScriptHandle playerId(pActor->GetEntityId());
+		//CallScript(m_serverStateScript, "RequestSpectatorTarget", playerId, change);
+
+		CallMonoScript<void>(m_pScriptClass, "RequestSpectatorTarget", pActor->GetEntityId(), change);
 	}
 }
 
@@ -1197,8 +1215,10 @@ void CGameRules::ChangeTeam(CActor *pActor, int teamId)
 
 	if (gEnv->bServer)
 	{
-		ScriptHandle handle(params.entityId);
-		CallScript(m_serverStateScript, "OnChangeTeam", handle, params.teamId);
+		//ScriptHandle handle(params.entityId);
+		//CallScript(m_serverStateScript, "OnChangeTeam", handle, params.teamId);
+
+		CallMonoScript<void>(m_pScriptClass, "OnChangeTeam", params.entityId, params.teamId);
 	}
 	else if (pActor->GetEntityId() == m_pGameFramework->GetClientActor()->GetEntityId())
 		GetGameObject()->InvokeRMIWithDependentObject(SvRequestChangeTeam(), params, eRMI_ToServer, params.entityId);
@@ -1634,14 +1654,16 @@ void CGameRules::SetTeam(int teamId, EntityId id)
 	}
 
 	{
-		ScriptHandle handle(id);
-		CallScript(m_serverStateScript, "OnSetTeam", handle, teamId);
+		//ScriptHandle handle(id);
+		//CallScript(m_serverStateScript, "OnSetTeam", handle, teamId);
+
+		CallMonoScript<void>(m_pScriptClass, "OnSetTeam", id, teamId);
 	}
 
-	if (gEnv->IsClient())
+	//if (gEnv->IsClient())
 	{
-		ScriptHandle handle(id);
-		CallScript(m_clientStateScript, "OnSetTeam", handle, teamId);
+		//ScriptHandle handle(id);
+		//CallScript(m_clientStateScript, "OnSetTeam", handle, teamId);
 	}
 	
 	// if this is a spawn group, update it's validity
@@ -2518,28 +2540,30 @@ bool CGameRules::IsSpawnGroup(EntityId id) const
 //------------------------------------------------------------------------
 void CGameRules::RequestSpawnGroup(EntityId spawnGroupId)
 {
-	CallScript(m_script, "RequestSpawnGroup", ScriptHandle(spawnGroupId));
+	//CallScript(m_script, "RequestSpawnGroup", ScriptHandle(spawnGroupId));
+	CallMonoScript<void>(m_pScriptClass, "RequestSpawnGroup", spawnGroupId);
 }
 
 //------------------------------------------------------------------------
 void CGameRules::SetPlayerSpawnGroup(EntityId playerId, EntityId spawnGroupId)
 {
-	CallScript(m_script, "SetPlayerSpawnGroup", ScriptHandle(playerId), ScriptHandle(spawnGroupId));
+	//CallScript(m_script, "SetPlayerSpawnGroup", ScriptHandle(playerId), ScriptHandle(spawnGroupId));
+	CallMonoScript<void>(m_pScriptClass, "SetPlayerSpawnGroup", playerId, spawnGroupId);
 }
 
 //------------------------------------------------------------------------
 EntityId CGameRules::GetPlayerSpawnGroup(CActor *pActor)
 {
-	if (!m_script || m_script->GetValueType("GetPlayerSpawnGroup") != svtFunction)
+	/*if (!m_script || m_script->GetValueType("GetPlayerSpawnGroup") != svtFunction)
 		return 0;
 
 	ScriptHandle ret(0);
 	m_pScriptSystem->BeginCall(m_script, "GetPlayerSpawnGroup");
 	m_pScriptSystem->PushFuncParam(m_script);
 	m_pScriptSystem->PushFuncParam(pActor->GetEntity()->GetScriptTable());
-	m_pScriptSystem->EndCall(ret);
+	m_pScriptSystem->EndCall(ret);*/
 
-	return (EntityId)ret.n;
+	return CallMonoScript<EntityId>(m_pScriptClass, "GetPlayerSpawnGroup", pActor->GetEntityId());
 }
 
 //------------------------------------------------------------------------
@@ -2580,7 +2604,8 @@ void CGameRules::CheckSpawnGroupValidity(EntityId spawnGroupId)
 		if (GetPlayerSpawnGroup(pActor)==spawnGroupId)
 		{
 			if (!valid || GetTeam(spawnGroupId)!=GetTeam(playerId))
-				CallScript(m_serverScript, "OnSpawnGroupInvalid", ScriptHandle(playerId), ScriptHandle(spawnGroupId));
+				//CallScript(m_serverScript, "OnSpawnGroupInvalid", ScriptHandle(playerId), ScriptHandle(spawnGroupId));
+				CallMonoScript<void>(m_pScriptClass, "OnSpawnGroupInvalid", playerId, spawnGroupId);
 		}
 	}
 }
@@ -3451,7 +3476,8 @@ void CGameRules::CreateScriptExplosionInfo(SmartScriptTable &scriptExplosionInfo
 
 void CGameRules::ShowScores(bool show)
 {
-	CallScript(m_script, "ShowScores", show);
+	//CallScript(m_script, "ShowScores", show);
+	CallMonoScript<void>(m_pScriptClass, "ShowScores", show);
 }
 
 //------------------------------------------------------------------------
@@ -3607,7 +3633,8 @@ void CGameRules::PrepCollision(int src, int trg, const SGameCollision& event, IE
 void CGameRules::Restart()
 {
 	if (gEnv->bServer)
-		CallScript(m_script, "RestartGame", true);
+		//CallScript(m_script, "RestartGame", true);
+		CallMonoScript<void>(m_pScriptClass, "RestartGame", true);
 }
 
 //------------------------------------------------------------------------

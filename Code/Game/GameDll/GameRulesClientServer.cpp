@@ -11,7 +11,6 @@ History:
 
 *************************************************************************/
 #include "StdAfx.h"
-#include "ScriptBind_GameRules.h"
 #include "GameRules.h"
 #include "Game.h"
 #include "GameCVars.h"
@@ -59,8 +58,7 @@ void CGameRules::ClientHit(const HitInfo &hitInfo)
 	if(pActor == pClientActor)
 		if (gEnv->pInput) gEnv->pInput->ForceFeedbackEvent( SFFOutputEvent(eDI_XI, eFF_Rumble_Basic, 0.5f * hitInfo.damage * 0.01f, hitInfo.damage * 0.02f, 0.0f));
 
-	CreateScriptHitInfo(m_scriptHitInfo, hitInfo);
-	CallScript(m_clientStateScript, "OnHit", m_scriptHitInfo);
+	CallMonoScript<void>(m_pScriptClass, "OnHit", gEnv->pMonoScriptSystem->GetConverter()->ToManagedType(eCMT_HitInfo, &const_cast<HitInfo &>(hitInfo)));
 
 	bool backface = hitInfo.dir.Dot(hitInfo.normal)>0;
 	if (!hitInfo.remote && hitInfo.targetId && !backface)
@@ -198,7 +196,7 @@ void CGameRules::ProcessServerHit(const HitInfo &hitInfo)
 		}
 
 		CreateScriptHitInfo(m_scriptHitInfo, hitInfo);
-		CallScript(m_serverStateScript, "OnHit", m_scriptHitInfo);
+		CallMonoScript<void>(m_pScriptClass, "OnHit", gEnv->pMonoScriptSystem->GetConverter()->ToManagedType(eCMT_HitInfo, &const_cast<HitInfo &>(hitInfo)));
 
 		if(pTarget && !pTarget->IsDead())
 		{
@@ -904,8 +902,7 @@ IMPLEMENT_RMI(CGameRules, ClSetTeam)
 			m_pRadio->SetTeam(GetTeamName(params.teamId));
 	}
 
-	ScriptHandle handle(params.entityId);
-	CallScript(m_clientStateScript, "OnSetTeam", handle, params.teamId);
+	CallMonoScript<void>(m_pScriptClass, "OnSetTeam", params.entityId, params.teamId);
 
 	return true;
 }

@@ -201,10 +201,4 @@ void InitGameFactory(IGameFramework *pFramework)
 
 
 	REGISTER_GAME_OBJECT_EXTENSION(pFramework, ScriptControlledPhysics);
-
-	pFramework->GetIGameRulesSystem()->RegisterGameRules("SinglePlayer", "GameRules");
-	pFramework->GetIGameRulesSystem()->AddGameRulesAlias("SinglePlayer", "sp");
-
-	pFramework->GetIGameRulesSystem()->RegisterGameRules("DeathMatch", "GameRules");
-	pFramework->GetIGameRulesSystem()->AddGameRulesAlias("DeathMatch", "dm");
 }

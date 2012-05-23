@@ -28,6 +28,8 @@
 #include "IViewSystem.h"
 #include "CinematicInput.h"
 
+#include <MonoCommon.h>
+
 class CActor;
 class CPlayer;
 
@@ -1218,6 +1220,8 @@ protected:
 	bool                m_explosionScreenFX;
 
 	CCinematicInput			m_cinematicInput;
+
+	IMonoClass *m_pScriptClass;
 };
 
 #define NOTIFY_UI_MP( fct ) { \

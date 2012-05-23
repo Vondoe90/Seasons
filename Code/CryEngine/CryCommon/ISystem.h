@@ -91,6 +91,8 @@ struct ISoftCodeMgr;
 struct IZLibCompressor;
 struct IOutputPrintSink;
 
+struct IMonoScriptSystem;
+
 struct ILocalMemoryUsage;
 
 typedef void* WIN_HWND;
@@ -800,6 +802,8 @@ private:
 
 public:
 	SSystemGlobalEnvironment() : szCmdLine("") {};
+
+	IMonoScriptSystem *pMonoScriptSystem;
 };
 
 UNIQUE_IFACE struct IProfilingSystem
