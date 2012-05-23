@@ -1,0 +1,8 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="80801" StringGenMask="%ALLOW_TESSELATION%DECAL%GLOSS_MAP" SurfaceType="" MatTemplate="" Diffuse="0.24680044,0.24680044,0.24680044" Specular="0.12752977,0.12752977,0.12752977" Emissive="0,0,0" Shininess="10" Opacity="0.99000001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/concrete_plain.tif"/>
+  <Texture Map="Specular" File="textures/decals/concrete_spec.tif"/>
+  <Texture Map="Bumpmap" File="textures/decals/concrete_ddn.tif"/>
+ </Textures>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="4" GlossMapChannelB="0" SpecMapChannelG="0" FresnelScale="1" FresnelBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

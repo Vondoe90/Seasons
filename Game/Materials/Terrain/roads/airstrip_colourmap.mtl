@@ -1,0 +1,6 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="2100000800" StringGenMask="%DECAL%TESSELLATION%VERTCOLORS" SurfaceType="" MatTemplate="" Diffuse="0.627451,0.627451,0.627451" Specular="0,0,0" Emissive="0,0,0" Shininess="10" Opacity="0.44999999">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain/roads/airfield_blue.tif" Filter="7"/>
+ </Textures>
+ <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.25,0.25,0.25"/>
+</Material>

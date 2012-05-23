@@ -1,0 +1,14 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="102080801" SurfaceType="" Diffuse="0.40784317,0.40784317,0.40784317" Specular="0.064705893,0.064705893,0.064705893" Emissive="0,0,0" Shininess="31.299999" Opacity="0.94999999">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/leaf_2.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Specular" File="textures/decals/leaf_2.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/decals/leaf_1_ddn.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams ObmDisplacement="0.0099999998" AmbientMultiplier="1"/>
+</Material>

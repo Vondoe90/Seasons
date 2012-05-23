@@ -1,0 +1,15 @@
+<Material MtlFlags="0" Shader="Illum" GenMask="303038480" SurfaceType="" Diffuse="0.49803901,0.49803901,0.49803901" Specular="1,1,1" Emissive="0,0,0" Shininess="10" Opacity="0.97000003">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/metal_tin.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Specular" File="textures/decals/metal_tin_spec.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Normalmap" File="textures/decals/metal_tin_ddn.tif" Amount="50">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams Displacement="0.025" AmbientMultiplier="1"/>
+ <MaterialLayers />
+</Material>

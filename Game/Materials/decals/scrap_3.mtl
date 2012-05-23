@@ -1,0 +1,14 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="102080801" SurfaceType="" Diffuse="0.38823533,0.38823533,0.38823533" Specular="0.17176472,0.17176472,0.17176472" Emissive="0,0,0" Shininess="31.299999" Opacity="0.94999999">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/scrap_3.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Specular" File="textures/decals/scrap_3.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/decals/scrap_3_ddn.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams ObmDisplacement="0.0049999999" AmbientMultiplier="1"/>
+</Material>

@@ -1,0 +1,101 @@
+<UnitTests filename="Animations\Graphs\humanmalefullbody.xml" >
+
+	<Test 
+		id="Idle_NW" 
+		description="Just for testing using preselections" >
+		<UsePreselection name="IdleHealthy_NW" />
+		<Inputs>
+			<Input id="Item" value="nw" />
+		</Inputs>
+		<Outputs onlyListedStatesAllowed="false" >
+			<IncludedState value="Idle with IdleBreak Timer" mustBeInTopRank="true" />
+			<ExcludedState value="Idle anyStance Rifle" />
+		</Outputs> 
+	</Test>
+	
+	<Test 
+		id="Walk" 
+		description="Making sure Idle is not available when moving" >
+		<UsePreselection name="Walking_Rifle" />
+		<Inputs>
+			<Input id="Item" value="nw" />
+		</Inputs>
+		<Outputs onlyListedStatesAllowed="false" >
+			<IncludedState value="Walk anyStance anyItem Fwd" mustBeInTopRank="true" />
+			<ExcludedState value="Idle anyStance Rifle" />
+			<ExcludedState value="Idle with IdleBreak Timer" />
+		</Outputs> 
+	</Test>
+	
+	<Test 
+		id="Jumping" 
+		description="Jump Loop" >
+		<UsePreselection name="Jumping" />
+		<Inputs>
+			<Input id="Item" value="rifle" />
+		</Inputs>
+		<Outputs onlyListedStatesAllowed="false" >
+			<IncludedState value="Jump Loop" mustBeInTopRank="true" />
+		</Outputs> 
+	</Test>
+
+	<Test 
+		id="Idle_RIFLE" 
+		description="Just for testing using preselections" >
+		<UsePreselection name="IdleHealthy_NW" />
+		<Inputs>
+			<Input id="Item" value="rifle" />
+		</Inputs>
+		<Outputs onlyListedStatesAllowed="false" >
+			<IncludedState value="Idle anyStance Rifle" mustBeInTopRank="true" />
+			<ExcludedState value="Idle with IdleBreak Timer" />
+		</Outputs> 
+	</Test>
+
+</UnitTests>
+<!--
+	<Test 
+		id="unique_test_name" 
+		description="optional_description" >
+		<Inputs>
+			<Input id="input_name" value="a_possible_value" />
+		</Inputs>
+		<Outputs onlyListedStatesAllowed="false" >
+			<IncludedState value="I_must_be_in_the_results" mustBeInTopRanking="true"/>
+			<ExcludedState value="I_must_not_be_in_the_results" />
+		</Outputs> 
+	</Test> 
+-->
+<!--
+		<Inputs>
+			<Input id="Action" value="" />
+			<Input id="ActualSpeed" value="" />
+			<Input id="ActualTurnAngleZ" value="" />
+			<Input id="Aiming" value="" />
+			<Input id="AnimPhase" value="" />
+			<Input id="AttackLean" value="" />
+			<Input id="BlendRunStrafe" value="" />
+			<Input id="DesiredMoveAngle" value="" />
+			<Input id="DesiredSpeed" value="" />
+			<Input id="DesiredTurnAngleZ" value="" />
+			<Input id="Firing" value="" />
+			<Input id="GroundSlope" value="" />
+			<Input id="Health" value="" />
+			<Input id="Item" value="" />
+			<Input id="LocomotionState" value="" />
+			<Input id="MoveDirectionX" value="" />
+			<Input id="MoveDirectionY" value="" />
+			<Input id="PseudoDir" value="" />
+			<Input id="PseudoSpeed" value="" />
+			<Input id="Signal" value="" />
+			<Input id="Stance" value="" />
+			<Input id="TargetAspect" value="" />
+			<Input id="UsingLookIK" value="" />
+			<Input id="Vehicle" value="" />
+			<Input id="VehicleSeat" value="" />
+			<Input id="WeaponAlerted" value="" />
+			<Input id="Wound" value="" />
+			<Input id="freefall" value="" />
+			<Input id="waterLevel" value="" />
+		</Inputs>
+-->

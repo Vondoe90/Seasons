@@ -1,0 +1,8 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="100000800" StringGenMask="%DECAL%STAT_BRANCHING" SurfaceType="" MatTemplate="" Diffuse="0.44705886,0.32941177,0.21960786" Specular="0,0,0" Emissive="0,0,0" Shininess="10" Opacity="0.99000001">
+ <Textures>
+  <Texture Map="Diffuse" File="materials/levels/cxp/decals/leaves2_deca2x_dots.tif" IsTileU="0" IsTileV="0">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams AmbientMultiplier="1"/>
+</Material>

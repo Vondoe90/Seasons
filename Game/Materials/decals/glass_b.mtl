@@ -1,0 +1,7 @@
+<Material MtlFlags="524290" Shader="Illum" GenMask="801" StringGenMask="%ALLOW_POM%DECAL" SurfaceType="" MatTemplate="" Diffuse="0.64705884,0.64705884,0.64705884" Specular="1,1,1" Emissive="0,0,0" Shininess="10" Opacity="0.99000001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/glass_b.tif"/>
+  <Texture Map="Bumpmap" File="textures/decals/glass_b_ddn.tif"/>
+ </Textures>
+ <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="0.56" GlossFromDiffuseOffset="0" FresnelBias="0" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.25,0.25,0.25"/>
+</Material>

@@ -1,0 +1,10 @@
+<Material MtlFlags="524296" Shader="Illum" GenMask="8090801" StringGenMask="%ALLOW_POM%DECAL%ENVIRONMENT_MAP%GLOSS_MAP%PARALLAX_OCCLUSION_MAPPING" SurfaceType="mat_rock" MatTemplate="" Diffuse="0.20835964,0.20835964,0.20835964" Specular="0.231373,0.231373,0.231373" Emissive="0,0,0" Shininess="17" Opacity="0.99000001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain/decals/dirt_on_road_16.tif" Filter="7"/>
+  <Texture Map="Specular" File="textures/terrain/decals/dirt_on_road_16_spec.tif"/>
+  <Texture Map="Bumpmap" File="textures/terrain/decals/dirt_on_road_16_ddn.tif"/>
+  <Texture Map="Environment" File="textures/cubemaps/camera_wetroad.dds"/>
+ </Textures>
+ <DetailDecal Opacity="128" SSAOAmount="0" topTileU="1" topTileV="1" topOffsV="0" topOffsU="0" topRotation="0" topDeformation="0" topSortOffset="0" bottomTileU="0.5" bottomTileV="0.5" bottomOffsV="0.5" bottomOffsU="0.5" bottomRotation="0" bottomDeformation="0" bottomSortOffset="0"/>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="4" PomDisplacement="0.02" SpecMapChannelG="0" FresnelScale="1" FresnelBias="0" SelfShadowStrength="2" IndirectColor="0.25,0.25,0.25"/>
+</Material>

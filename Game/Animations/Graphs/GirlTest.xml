@@ -1,0 +1,449 @@
+<AnimationSetup version="1.5" expensiveLocomotionSelection="0">
+ <Character filename="objects/characters/Jelena/Jelena.cdf"/>
+ <DefaultNodeDetails allowSelect="1" includeInGame="1" canMix="1" Hurryable="1" SkipFP="0"/>
+ <DefaultAnimNodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="0" TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+ <DefaultMovementNodeDetails useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+ <Inputs>
+  <KeyState name="Action" signalled="0" priority="101" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="1" mixinFilter="0" defaultValue="idle">
+   <Key value="climbLadder"/>
+   <Key value="falling"/>
+   <Key value="idle"/>
+   <Key value="idleBreak"/>
+   <Key value="jumpMP"/>
+   <Key value="random_test"/>
+  </KeyState>
+  <KeyState name="ActualMoveDir4LH" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0">
+   <Key value="Bwd"/>
+   <Key value="Fwd"/>
+   <Key value="Idle"/>
+   <Key value="Lft"/>
+   <Key value="Rgt"/>
+  </KeyState>
+  <FloatState name="ActualMoveSpeed" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="1" mixinFilter="0" min="-50" max="50"/>
+  <FloatState name="ActualMoveSpeedLH" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-50" max="50"/>
+  <FloatState name="ActualMoveSpeedLX" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-50" max="50"/>
+  <FloatState name="ActualMoveSpeedLY" signalled="0" priority="15" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-50" max="50"/>
+  <FloatState name="ActualTurnSpeedLZ" signalled="0" priority="100" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-1" max="1"/>
+  <FloatState name="Aiming" signalled="0" priority="77" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="1" mixinFilter="0" defaultValue="0.5" min="0" max="1"/>
+  <FloatState name="AnimPhase" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="1" mixinFilter="0" min="0" max="1"/>
+  <IntegerState name="DesiredTurnSpeed" signalled="0" priority="150" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" defaultValue="0" min="-1" max="1"/>
+  <FloatState name="Firing" signalled="0" priority="10" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="0" max="10"/>
+  <IntegerState name="Health" signalled="0" priority="200" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="0" max="100"/>
+  <KeyState name="Item" signalled="0" priority="90" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="1" defaultValue="nw">
+   <Key value="nw"/>
+   <Key value="pistol"/>
+   <Key value="rifle"/>
+  </KeyState>
+  <KeyState name="ObjectDirection" signalled="0" priority="5" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" defaultValue="up">
+   <Key value="down"/>
+   <Key value="up"/>
+  </KeyState>
+  <FloatState name="PseudoSpeed" signalled="0" priority="90" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="1" defaultValue="0" min="0" max="30"/>
+  <KeyState name="RequestedMoveDir4LH" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0">
+   <Key value="Bwd"/>
+   <Key value="Fwd"/>
+   <Key value="Idle"/>
+   <Key value="Lft"/>
+   <Key value="Rgt"/>
+  </KeyState>
+  <FloatState name="RequestedMoveSpeed" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-50" max="50"/>
+  <FloatState name="RequestedMoveSpeedLH" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-50" max="50"/>
+  <FloatState name="RequestedMoveSpeedLX" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-50" max="50"/>
+  <FloatState name="RequestedMoveSpeedLY" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-50" max="50"/>
+  <FloatState name="RequestedTurnSpeedLZ" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-50" max="50"/>
+  <KeyState name="Signal" signalled="1" priority="102" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="1" mixinFilter="0" defaultValue="none">
+   <Key value="exit_ladder_top"/>
+   <Key value="none"/>
+   <Key value="playDeathAnim"/>
+  </KeyState>
+  <KeyState name="Stance" signalled="0" priority="95" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="1" defaultValue="relaxed">
+   <Key value="combat"/>
+   <Key value="crouch"/>
+   <Key value="prone"/>
+   <Key value="relaxed"/>
+   <Key value="stealth"/>
+   <Key value="swim"/>
+   <Key value="zerog"/>
+  </KeyState>
+  <FloatState name="SwimControlX" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-10" max="10"/>
+  <FloatState name="SwimControlY" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-10" max="10"/>
+  <FloatState name="SwimControlZ" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-10" max="10"/>
+  <IntegerState name="UsingLookIK" signalled="0" priority="15" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="1" mixinFilter="0" defaultValue="2" min="0" max="2"/>
+  <KeyState name="Vehicle" signalled="0" priority="150" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0">
+   <Key value="Asian_aaa"/>
+   <Key value="Asian_apc"/>
+   <Key value="Asian_helicopter"/>
+   <Key value="Asian_helicopter_low_budget"/>
+   <Key value="Asian_ltv"/>
+   <Key value="Asian_patrolboat"/>
+   <Key value="Asian_tank"/>
+   <Key value="Asian_truck"/>
+   <Key value="Civ_speedboat"/>
+   <Key value="DefaultVehicle"/>
+   <Key value="HMMWV"/>
+   <Key value="US_apc"/>
+   <Key value="US_hovercraft"/>
+   <Key value="US_ltv"/>
+   <Key value="US_smallboat"/>
+   <Key value="US_tank"/>
+   <Key value="US_trolley"/>
+   <Key value="US_vtol"/>
+   <Key value="dodge_charger"/>
+   <Key value="hmmvw"/>
+   <Key value="hmmwv_nextgen"/>
+   <Key value="none"/>
+  </KeyState>
+  <IntegerState name="VehicleSeat" signalled="0" priority="140" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="0" max="10"/>
+  <FloatState name="waterLevel" signalled="0" priority="85" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="-10" max="10"/>
+ </Inputs>
+ <Modifiers>
+  <Modifier Type="TimeAlignGroup" Id="2" groupName="Group_2"/>
+  <Modifier Type="WaitForStandUp" Id="5"/>
+  <Modifier Type="Ragdoll" Id="6"/>
+ </Modifiers>
+ <RandomizationSets>
+  <RandomizerSet id="1" name="&lt;RandomSet:Random_0&gt;">
+   <GeneralParameters switchAssetsOverTime="0" timeAlignBetweenAssets="0" switchOnNonLoopFinish="0" switchProbabilitySeconds="1" initialDelay="0"/>
+   <RandomAnim canBeStartedTwiceInARow="1" looping="0" allowInterrupt="1" probability="1" transitionTime="0.2" animName="Threat_nw_idle_01"/>
+  </RandomizerSet>
+  <RandomizerSet id="2" name="&lt;RandomSet:Random_1&gt;">
+   <GeneralParameters switchAssetsOverTime="0" timeAlignBetweenAssets="0" switchOnNonLoopFinish="0" switchProbabilitySeconds="3" initialDelay="0"/>
+   <RandomAnim canBeStartedTwiceInARow="1" looping="0" allowInterrupt="1" probability="1" transitionTime="0.2" animName="gr_idle_relaxed_03"/>
+  </RandomizerSet>
+  <RandomizerSet id="3" name="&lt;RandomSet:Random_2&gt;">
+   <GeneralParameters switchAssetsOverTime="1" timeAlignBetweenAssets="0" switchOnNonLoopFinish="1" switchProbabilitySeconds="6" initialDelay="0"/>
+   <RandomAnim canBeStartedTwiceInARow="1" looping="0" allowInterrupt="1" probability="5" transitionTime="0.89999998" animName="NoThreat_nw_idle_01"/>
+   <RandomAnim canBeStartedTwiceInARow="1" looping="0" allowInterrupt="1" probability="1" transitionTime="0.89999998" animName="Additive_Idle_Apprehensive_01"/>
+   <RandomAnim canBeStartedTwiceInARow="1" looping="0" allowInterrupt="1" probability="1" transitionTime="0.89999998" animName="Additive_Idle_Threat_01"/>
+   <RandomAnim canBeStartedTwiceInARow="1" looping="0" allowInterrupt="1" probability="1" transitionTime="0.89999998" animName="Additive_Idle_Relaxed_01"/>
+  </RandomizerSet>
+  <RandomizerSet id="4" name="&lt;RandomSet:Random_3&gt;">
+   <GeneralParameters switchAssetsOverTime="0" timeAlignBetweenAssets="0" switchOnNonLoopFinish="0" switchProbabilitySeconds="1" initialDelay="0"/>
+   <RandomAnim canBeStartedTwiceInARow="1" looping="0" allowInterrupt="1" probability="1" transitionTime="0.2" animName="swim_forward_nw_01"/>
+  </RandomizerSet>
+ </RandomizationSets>
+ <States>
+  <State id="Alive" allowSelect="0" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="&lt;Custom&gt;" animationControlledView="0">
+   <SelectWhen>
+    <Action value="idle"/>
+    <Aiming min="0" max="1"/>
+    <Health min="1" max="100"/>
+    <Signal value="none"/>
+    <Vehicle value="none"/>
+    <VehicleSeat />
+    <waterLevel min="1" max="10"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="0" TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName=""/>
+   <MovementAndCollider useHorizGraphDefault="0" useVertGraphDefault="0" mcmHoriz="1" mcmVert="1" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="0" colliderMode="0"/>
+   <LinkedModifiers />
+  </State>
+  <State id="FallAndPlay" allowSelect="1" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="&lt;Custom&gt;" animationControlledView="0">
+   <SelectWhen>
+    <Health value="0"/>
+    <Signal value="none"/>
+    <Vehicle value="none"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="0" TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName=""/>
+   <MovementAndCollider useHorizGraphDefault="0" useVertGraphDefault="0" mcmHoriz="1" mcmVert="1" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers>
+    <Modifier Id="5"/>
+    <Modifier Id="6"/>
+   </LinkedModifiers>
+   <FallAndPlay />
+   <Event onEnter="Ragdoll"/>
+  </State>
+  <State id="Idle" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="OneShot" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <DesiredTurnSpeed value="0"/>
+    <PseudoSpeed min="0" max="0.0099999998"/>
+    <RequestedMoveDir4LH value="Idle"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.30000001" dontInterrupt="0" TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="&lt;RandomSet:Random_2&gt;"/>
+   <MovementAndCollider useHorizGraphDefault="0" useVertGraphDefault="0" mcmHoriz="3" mcmVert="1" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="&lt;RandomSet:Random_2&gt;" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.30000001" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="DecoupledCatchUp" vertical="Entity" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="Idle Hub" allowSelect="0" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="1" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="Default" animationControlledView="0">
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="0" TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName=""/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+  </State>
+  <State id="Idle2Run" allowSelect="0" includeInGame="0" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="Transition" animationControlledView="0" extend="Run">
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="1" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.98000002" dontInterrupt="0" TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="NoThreat_nw_I2R_fast_F000_rfoot_01"/>
+   <MovementAndCollider useHorizGraphDefault="0" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="5" distance="0.5" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="NoThreat_nw_I2R_fast_F000_rfoot_01" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="1" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.98000002" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="Entity" vertical="SmoothedEntity" distance="0.5" angle="5" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="Idle2Walk" allowSelect="0" includeInGame="0" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="Transition" animationControlledView="0">
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.98000002" dontInterrupt="0" TransitionTime="0.5" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName=""/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+  </State>
+  <State id="IdleTurn_Left" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="1" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="&lt;Custom&gt;" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <DesiredTurnSpeed value="1"/>
+    <PseudoSpeed min="0" max="0.0099999998"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.98000002" dontInterrupt="0" TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="1" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="LOCO_NAV_IDLE_ROTATE"/>
+   <MovementAndCollider useHorizGraphDefault="0" useVertGraphDefault="1" mcmHoriz="3" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="100" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="1" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="LOCO_NAV_IDLE_ROTATE" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.98000002" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="DecoupledCatchUp" vertical="SmoothedEntity" angle="100" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="IdleTurn_Right" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="1" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="&lt;Custom&gt;" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <DesiredTurnSpeed value="-1"/>
+    <PseudoSpeed min="0" max="0.0099999998"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.98000002" dontInterrupt="0" TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="1" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="LOCO_NAV_IDLE_ROTATE"/>
+   <MovementAndCollider useHorizGraphDefault="0" useVertGraphDefault="1" mcmHoriz="3" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="100" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="1" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="LOCO_NAV_IDLE_ROTATE" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.98000002" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="DecoupledCatchUp" vertical="SmoothedEntity" angle="100" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="Jump" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="OneShot" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <Action value="jumpMP"/>
+    <ActualMoveDir4LH value="Fwd"/>
+    <PseudoSpeed min="0.69999999" max="2"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.34999999" dontInterrupt="1" TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="idleVault_50cm_01"/>
+   <MovementAndCollider useHorizGraphDefault="0" useVertGraphDefault="0" mcmHoriz="6" mcmVert="1" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="0.5" useGraphDefaultCollider="1" colliderMode="1"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="idleVault_50cm_01" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.34999999" forceInStateUntil="0.34999999"/>
+   <MovementControlMethod horizontal="AnimationHCollision" vertical="Entity" distance="0.5" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="Run" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="Movement Cycle" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <PseudoSpeed min="0.68000001" max="2"/>
+    <Stance />
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="0" TransitionTime="0.30000001" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="1" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="LOCO_NAV_STRAFE_RUN"/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="3" mcmVert="1" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="5" distance="0.30000001" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers>
+    <Modifier Id="2"/>
+   </LinkedModifiers>
+   <TransitionParamsLayer1 TransitionTime="0.30000001" KeyTime="-1" Structure="Group_2" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="1" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="LOCO_NAV_STRAFE_RUN" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="Entity" vertical="SmoothedEntity" distance="0.30000001" angle="5" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+   <Parameterization>
+    <Parameter id="Stance"/>
+   </Parameterization>
+  </State>
+  <State id="Swim Backward" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="&lt;Custom&gt;" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <Stance value="swim"/>
+    <SwimControlY min="-1000" max="-1"/>
+    <waterLevel min="-3000" max="1"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="1" TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="swim_back_nw_01"/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="swim_back_nw_01" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="Entity" vertical="SmoothedEntity" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="Swim Forward" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="&lt;Custom&gt;" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <Stance value="swim"/>
+    <SwimControlY min="1" max="1000"/>
+    <waterLevel min="-0.60000002" max="1"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="1" TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="swim_forward_nw_01"/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="swim_forward_nw_01" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="Entity" vertical="SmoothedEntity" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="Swim Forward Underwater" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="&lt;Custom&gt;" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <Stance value="swim"/>
+    <SwimControlY min="1" max="1000"/>
+    <waterLevel min="-3000" max="-0.60000002"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="1" TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="swim_underwater_nw_forward_01"/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="swim_underwater_nw_forward_01" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="Entity" vertical="SmoothedEntity" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="Swim Hub" allowSelect="0" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="1" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="Default" animationControlledView="0">
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="0" TransitionTime="0.2" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="0" RepeatLastKey="1" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName=""/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+  </State>
+  <State id="Swim Idle" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="&lt;Custom&gt;" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <Stance value="swim"/>
+    <SwimControlX min="-1" max="1"/>
+    <SwimControlY min="-1" max="1"/>
+    <waterLevel min="-3" max="1"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="1" TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="swim_idle_nw_01"/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="swim_idle_nw_01" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="Entity" vertical="SmoothedEntity" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="Swim Idle Underwater" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="&lt;Custom&gt;" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <Stance value="swim"/>
+    <SwimControlX min="-1" max="1"/>
+    <SwimControlY min="-1" max="1"/>
+    <waterLevel min="-3000" max="-3"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="1" TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="swim_idle_underwater_nw_01"/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="swim_idle_underwater_nw_01" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="Entity" vertical="SmoothedEntity" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="Swim Left" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="&lt;Custom&gt;" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <Stance value="swim"/>
+    <SwimControlX min="-1000" max="-1"/>
+    <waterLevel min="-3000" max="1"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="1" TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="swim_strafeUnderwater_nw_left_01"/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="swim_strafeUnderwater_nw_left_01" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="Entity" vertical="SmoothedEntity" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="Swim Right" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="&lt;Custom&gt;" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <Stance value="swim"/>
+    <SwimControlX min="1" max="1000"/>
+    <waterLevel min="-3000" max="1"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" dontInterrupt="1" TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="swim_strafeUnderwater_nw_right_01"/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="1" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers />
+   <TransitionParamsLayer1 TransitionTime="0.60000002" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="1" Idle2Move="0" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="swim_strafeUnderwater_nw_right_01" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="Entity" vertical="SmoothedEntity" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+  <State id="Walk" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="0" MovementControlMethodV="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" AnimNodePreset="Movement Cycle" animationControlledView="0" extend="Alive">
+   <SelectWhen>
+    <PseudoSpeed min="0.0099999998" max="0.68000001"/>
+   </SelectWhen>
+   <NodeDetails animLayer="1" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.40000001" dontInterrupt="0" TransitionTime="0.5" KeyTime="-1" Structure="" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="1" Move2Idle="0" PartialBodyUpdate="0"/>
+   <ParameterizedData animationName="LOCO_NAV_STRAFE_WALK"/>
+   <MovementAndCollider useHorizGraphDefault="1" useVertGraphDefault="1" mcmHoriz="3" mcmVert="5" useAnimXY="0" useAnimZ="0" useAnimRot="0" angle="-1" distance="-1" useGraphDefaultCollider="1" colliderMode="3"/>
+   <LinkedModifiers>
+    <Modifier Id="2"/>
+   </LinkedModifiers>
+   <TransitionParamsLayer1 TransitionTime="0.5" KeyTime="-1" Structure="Group_2" ManualUpdate="0" LoopAnimation="1" RepeatLastKey="0" AllowAnimRestart="0" VTimeWarping="0" Idle2Move="1" Move2Idle="0" PartialBodyUpdate="0"/>
+   <AnimationLayer1 animation1="LOCO_NAV_STRAFE_WALK" fullRootPriority="0" ensureInStack="0" stickyOutTime="-1" forceLeaveWhenFinished="0" speedMultiplier="1" MPSpeedMultiplier="1" stopCurrentAnimation="0" interruptCurrAnim="0" stayInStateUntil="0.40000001" forceInStateUntil="0"/>
+   <MovementControlMethod horizontal="Entity" vertical="SmoothedEntity" useAnimXY="0" useAnimZ="0" useAnimRot="0"/>
+   <ColliderMode mode="Pushable"/>
+  </State>
+ </States>
+ <Transitions>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Idle" to="Idle Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Idle Hub" to="Idle"/>
+  <Link forceFollowChance="0" cost="10" transitionTime="0" from="Idle Hub" to="Idle2Run"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Idle Hub" to="Idle2Walk"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.30000001" from="Idle Hub" to="IdleTurn_Left"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.30000001" from="Idle Hub" to="IdleTurn_Right"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Idle Hub" to="Jump"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Idle Hub" to="Swim Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Idle2Run" to="Run"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.40000001" from="Idle2Walk" to="Walk"/>
+  <Link forceFollowChance="1" cost="100" transitionTime="0" from="IdleTurn_Left" to="Idle Hub"/>
+  <Link forceFollowChance="1" cost="100" transitionTime="0" from="IdleTurn_Right" to="Idle Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.40000001" from="Jump" to="Idle Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Jump" to="Run"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.5" from="Run" to="Idle Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.60000002" from="Swim Backward" to="Swim Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.60000002" from="Swim Forward" to="Swim Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.60000002" from="Swim Forward Underwater" to="Swim Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Swim Hub" to="Idle Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Swim Hub" to="Swim Backward"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Swim Hub" to="Swim Forward"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Swim Hub" to="Swim Forward Underwater"/>
+  <Link forceFollowChance="0" cost="50" transitionTime="0" from="Swim Hub" to="Swim Idle"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Swim Hub" to="Swim Idle Underwater"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Swim Hub" to="Swim Left"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="Swim Hub" to="Swim Right"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.60000002" from="Swim Idle" to="Swim Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.60000002" from="Swim Idle Underwater" to="Swim Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.60000002" from="Swim Left" to="Swim Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.60000002" from="Swim Right" to="Swim Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.5" from="Walk" to="Idle Hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0.5" from="Walk" to="Run"/>
+ </Transitions>
+ <Views>
+  <View name="Death">
+   <State id="FallAndPlay" x="-51" y="10"/>
+   <Modifier id="5" x="-40" y="-110"/>
+   <Modifier id="6" x="-230" y="10"/>
+  </View>
+  <View name="Locomotion">
+   <State id="Idle" x="950" y="-490"/>
+   <State id="Idle Hub" x="920" y="-390"/>
+   <State id="Idle2Run" x="1240" y="-210"/>
+   <State id="Idle2Walk" x="600" y="-220"/>
+   <State id="IdleTurn_Left" x="1280" y="-540"/>
+   <State id="IdleTurn_Right" x="1280" y="-390"/>
+   <State id="Jump" x="630" y="-390"/>
+   <State id="Run" x="1130" y="-60"/>
+   <State id="Walk" x="800" y="-60"/>
+   <Modifier id="2" x="880" y="70"/>
+  </View>
+  <View name="Swimming">
+   <State id="Idle Hub" x="-490" y="130"/>
+   <State id="Swim Backward" x="-150" y="120"/>
+   <State id="Swim Forward" x="-140" y="-190"/>
+   <State id="Swim Forward Underwater" x="100" y="-140"/>
+   <State id="Swim Hub" x="-116" y="-10"/>
+   <State id="Swim Idle" x="-400" y="-210"/>
+   <State id="Swim Idle Underwater" x="-550" y="-110"/>
+   <State id="Swim Left" x="-360" y="-10"/>
+   <State id="Swim Right" x="150" y="-10"/>
+  </View>
+ </Views>
+</AnimationSetup>

@@ -1,0 +1,8 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="100000800" SurfaceType="" MatTemplate="" Diffuse="0.34901962,0.34901962,0.34901962" Specular="0.56862748,0.56862748,0.56862748" Emissive="0,0,0" Shininess="53.700001" Opacity="0.98000002">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/bullet_plastic.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams AmbientMultiplier="1"/>
+</Material>

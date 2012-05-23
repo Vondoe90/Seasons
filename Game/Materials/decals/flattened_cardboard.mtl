@@ -1,0 +1,11 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="100080801" SurfaceType="" Diffuse="0.44313729,0.44313729,0.44313729" Specular="0.032352947,0.032352947,0.032352947" Emissive="0,0,0" Shininess="31.299999" Opacity="0.94999999">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/cardboard.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Specular" File="textures/decals/cardboard.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams ObmDisplacement="0.0099999998" AmbientMultiplier="1"/>
+</Material>

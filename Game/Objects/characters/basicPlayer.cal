@@ -1,0 +1,220 @@
+#filepath = animations\human_male
+
+$AnimEventDatabase = animations\human_male\human_male.animevents
+//$Include = objects\characters\human\GlobalHuman.cal
+$TracksDatabase						=	animations\human_male\human_male.dba
+
+
+
+// ----- IdleAimPoses ---------
+
+relaxed_idleAimPoses_scar								= relaxed\relaxed_idleAimPoses_scar.caf
+crouch_idleAimPoses_scar								= crouch\crouch_idleAimPoses_scar.caf
+
+
+
+// ----- Ladder Climbing -----
+
+ladder_ExitOffTop_nw_01					= ladder\relaxed_ladderOffTop_nw_01.caf
+ladder_ClimbLoop_nw_01					= ladder\relaxed_ladderClimbLoopNoZ_nw_01.caf
+ladder_*												= ladder\relaxed_*.caf
+
+
+// ----- LMG ---------
+
+_RELAXED_RUN										= lmg_files\relaxed_run.lmg (relaxed_idleAimPoses_scar)
+_RELAXED_RUN_NW									= lmg_files\relaxed_run.lmg
+_RELAXED_RUN_BWD								= lmg_files\relaxed_run_bwd.lmg (relaxed_idleAimPoses_scar)
+_RELAXED_RUN_BWD_NW							= lmg_files\relaxed_run_bwd.lmg
+
+_RELAXED_WALK										= lmg_files\relaxed_walk.lmg (relaxed_idleAimPoses_scar)
+_RELAXED_WALK_NW								= lmg_files\relaxed_walk.lmg
+_RELAXED_WALK_BWD								= lmg_files\relaxed_walk_bwd.lmg (relaxed_idleAimPoses_scar)
+_RELAXED_WALK_BWD_NW						= lmg_files\relaxed_walk_bwd.lmg
+
+
+_RELAXED_STEP_ROTATE						= lmg_files\relaxed_IdleStepRotate_nw.lmg (relaxed_idleAimPoses_scar)		
+_RELAXED_STEP_ROTATE_NW					= lmg_files\relaxed_IdleStepRotate_nw.lmg
+
+_CROUCH_MOVE										= lmg_files\crouch_move.lmg (crouch_idleAimPoses_scar)
+_CROUCH_RUN											= lmg_files\crouch_run.lmg (crouch_idleAimPoses_scar)
+_CROUCH_WALK										= lmg_files\crouch_walk.lmg (crouch_idleAimPoses_scar)
+_CROUCH_MOVE_NW									= lmg_files\crouch_move.lmg 
+_CROUCH_RUN_NW									= lmg_files\crouch_run.lmg 
+_CROUCH_WALK_NW									= lmg_files\crouch_walk.lmg
+
+
+
+
+// ----- Idle ---------
+
+relaxed_idle_01									= relaxed\relaxed_idle_01.caf (relaxed_idleAimPoses_scar)
+crouch_idle_01									= crouch\crouch_idle_01.caf (crouch_idleAimPoses_scar)
+relaxed_idle_nw_01							= relaxed\relaxed_idle_01.caf
+crouch_idle_nw_01								= crouch\crouch_idle_01.caf 
+
+
+relaxed_step_nw_idle_01					= relaxed\relaxed_steprotate_nw_idle_01.caf
+relaxed_steprotate_nw_left_01		= relaxed\relaxed_steprotate_nw_left_01.caf					
+relaxed_steprotate_nw_right_01	= relaxed\relaxed_steprotate_nw_right_01.caf
+
+
+
+// ----- Misc -----
+
+idleBreak_*			= idle_breaks\relaxed_*.caf
+additive_*			= additive\Additive_*.caf
+coop_*					= coop\coop_*.caf
+misc_*					= misc\*.caf
+additional_*		= additional\*.caf
+relaxed_*				= relaxed\*.caf
+throw_*					= throw\*.caf
+contextual_*		= contextual\h_*.caf
+melee_*					= melee\*.caf
+ikposes_*				= interactionposes\*.caf
+
+// ----- Demonstration Asset for Animation Controlled IK
+ik_demo_touch_chin	= relaxed\relaxed_idle_touchChin_IK_01.caf
+
+// ----- Jump ---------
+
+jump_*									= jump\relaxed_jump_*.caf
+jump_loop_nw_01					= jump\relaxed_jumpLoop_nw_01.caf
+jump_freefall_nw_01			= jump\relaxed_freefallLoop_nw_01.caf
+jump_fall_long_nw_01 		= jump\relaxed_jump_land_long_nw_01.caf
+
+// ----- Swimming -----
+
+swim_*		= swim\swim_*.caf
+
+// ----- Stand Up Animations -----
+
+*	= standup\*.caf
+
+// ----- RELOAD -------
+combat_reloadFullChamberUB_rifle_01				=	combat\combat_reloadFullChamberUB_rifle_01.caf
+combat_reloadEmptyChamberUB_rifle_01			=	combat\combat_reloadEmptyChamberUB_rifle_01.caf
+
+
+// ----- Run ---------
+
+
+relaxed_run_forward_fast						=	relaxed\relaxed_run_nw_forward_fast_01.caf
+relaxed_run_forward_slow						=	relaxed\relaxed_run_nw_forward_slow_01.caf
+relaxed_run_back_fast							=	relaxed\relaxed_run_nw_back_fast_01.caf
+relaxed_run_back_slow							=	relaxed\relaxed_run_nw_back_slow_01.caf
+relaxed_run_left_fast							=	relaxed\relaxed_runStrafe_nw_left_fast_01.caf
+relaxed_run_left_slow							=	relaxed\relaxed_runStrafe_nw_left_slow_01.caf
+relaxed_run_right_fast							=	relaxed\relaxed_runStrafe_nw_right_fast_01.caf
+relaxed_run_right_slow							=	relaxed\relaxed_runStrafe_nw_right_slow_01.caf
+relaxed_run_left_bwd_fast							=	relaxed\relaxed_runStrafe_nw_left_bwd_fast_01.caf
+relaxed_run_left_bwd_slow							=	relaxed\relaxed_runStrafe_nw_left_bwd_slow_01.caf
+relaxed_run_right_bwd_fast							=	relaxed\relaxed_runStrafe_nw_right_bwd_fast_01.caf
+relaxed_run_right_bwd_slow							=	relaxed\relaxed_runStrafe_nw_right_bwd_slow_01.caf
+
+combat_run_rifle_forward_fast						=	combat\combat_run_rifle_forward_fast_01.caf
+combat_run_rifle_forward_slow						=	combat\combat_run_rifle_forward_slow_01.caf
+combat_run_rifle_left_fast						=	combat\combat_run_rifle_strafe_left_fast_01.caf
+combat_run_rifle_left_slow						=	combat\combat_run_rifle_strafe_left_slow_01.caf
+combat_run_rifle_right_fast						=	combat\combat_run_rifle_strafe_right_fast_01.caf
+combat_run_rifle_right_slow						=	combat\combat_run_rifle_strafe_right_slow_01.caf
+combat_run_rifle_back_fast						=	combat\combat_run_rifle_back_fast_01.caf
+combat_run_rifle_back_slow						=	combat\combat_run_rifle_back_slow_01.caf
+
+crouch_run_forward_fast							=	crouch\crouch_run_forward_fast_nw_01.caf
+crouch_run_back_fast							=	crouch\crouch_run_back_fast_nw_01.caf
+crouch_run_left_fast							=	crouch\crouch_strafe_left_fast_nw_01.caf
+crouch_run_right_fast							=	crouch\crouch_strafe_right_fast_nw_01.caf
+
+// ----- Walk ---------
+
+relaxed_walk_forward_fast						=	relaxed\relaxed_walk_nw_forward_fast_01.caf
+relaxed_walk_forward_slow						=	relaxed\relaxed_walk_nw_forward_slow_01.caf
+relaxed_walk_back_fast							=	relaxed\relaxed_walk_nw_back_fast_01.caf
+relaxed_walk_back_slow							=	relaxed\relaxed_walk_nw_back_slow_01.caf
+relaxed_walk_left_fast							=	relaxed\relaxed_walkStrafe_nw_left_fast_01.caf
+relaxed_walk_left_slow							=	relaxed\relaxed_walkStrafe_nw_left_slow_01.caf
+relaxed_walk_right_fast							=	relaxed\relaxed_walkStrafe_nw_right_fast_01.caf
+relaxed_walk_right_slow							=	relaxed\relaxed_walkStrafe_nw_right_slow_01.caf
+relaxed_walk_left_bwd_fast							=	relaxed\relaxed_walkStrafe_nw_left_bwd_fast_01.caf
+relaxed_walk_left_bwd_slow							=	relaxed\relaxed_walkStrafe_nw_left_bwd_slow_01.caf
+relaxed_walk_right_bwd_fast							=	relaxed\relaxed_walkStrafe_nw_right_bwd_fast_01.caf
+relaxed_walk_right_bwd_slow							=	relaxed\relaxed_walkStrafe_nw_right_bwd_slow_01.caf
+
+
+combat_walk_rifle_forward_fast						=	combat\combat_walk_rifle_forward_fast_01.caf
+combat_walk_rifle_forward_slow						=	combat\combat_walk_rifle_forward_slow_01.caf
+combat_walk_rifle_left_fast						=	combat\combat_walk_rifle_strafe_left_fast_01.caf
+combat_walk_rifle_left_slow						=	combat\combat_walk_rifle_strafe_left_slow_01.caf
+combat_walk_rifle_right_fast						=	combat\combat_walk_rifle_strafe_right_fast_01.caf
+combat_walk_rifle_right_slow						=	combat\combat_walk_rifle_strafe_right_slow_01.caf
+combat_walk_rifle_back_fast						=	combat\combat_walk_rifle_back_fast_01.caf
+combat_walk_rifle_back_slow						=	combat\combat_walk_rifle_back_slow_01.caf
+
+crouch_walk_forward							=	crouch\crouch_walk_forward.caf
+crouch_walk_back							=	crouch\crouch_walk_back.caf
+crouch_walk_left							=	crouch\crouch_walk_left.caf
+crouch_walk_right							=	crouch\crouch_walk_right.caf
+
+// ----- Uphill Downhill ---------
+
+relaxed_walkDownhill_nw_forward_fast_01					=	relaxed\relaxed_walkDownhill_nw_forward_fast_01.caf
+relaxed_walkUphill_nw_forward_fast_01					=	relaxed\relaxed_walkUphill_nw_forward_fast_01.caf
+relaxed_walkDownhill_nw_forward_slow_01					=	relaxed\relaxed_walkDownhill_nw_forward_slow_01.caf
+relaxed_walkUphill_nw_forward_slow_01					=	relaxed\relaxed_walkUphill_nw_forward_slow_01.caf
+
+
+//-------US LTV-------
+usLTV_passenger01Enter_01					=	vehicles\us\usLTV\usLTV_passenger01Enter_01.caf
+usLTV_passenger01Exit_01					=	vehicles\us\usLTV\usLTV_passenger01Exit_01.caf
+usLTV_passenger01Idle_01					=	vehicles\us\usLTV\usLTV_passenger01Idle_01.caf
+usLTV_passenger02Enter_01					=	vehicles\us\usLTV\usLTV_passenger02Enter_01.caf
+usLTV_passenger02Exit_01					=	vehicles\us\usLTV\usLTV_passenger02Exit_01.caf
+usLTV_passenger02Idle_01					=	vehicles\us\usLTV\usLTV_passenger02Idle_01.caf
+usLTV_passenger03Enter_01					=	vehicles\us\usLTV\usLTV_passenger03Enter_01.caf
+usLTV_passenger03Exit_01					=	vehicles\us\usLTV\usLTV_passenger03Exit_01.caf
+usLTV_passenger03Idle_01					=	vehicles\us\usLTV\usLTV_passenger03Idle_01.caf
+usLTV_passenger04Enter_01					=	vehicles\us\usLTV\usLTV_passenger04Enter_01.caf
+usLTV_passenger04Exit_01					=	vehicles\us\usLTV\usLTV_passenger04Exit_01.caf
+usLTV_passenger04Idle_01					=	vehicles\us\usLTV\usLTV_passenger04Idle_01.caf
+usLTV_steering_01									=	vehicles\us\usLTV\usLTV_steering_01.caf
+//usLTV_passenger02IdleBreak_01		=	vehicles\us\usLTV\usLTV_passenger02IdleBreak_01.caf
+//usLTV_passenger02IdleBreak_02		=	vehicles\us\usLTV\usLTV_passenger02IdleBreak_02.caf
+
+//-------US Abrams-----
+
+abrams_enterOpenedHatch_01				=	vehicles\us\abrams\abrams_enterOpenedHatch_01.caf
+abrams_driveridle_01					=	vehicles\us\abrams\abrams_driverIdle_01.caf
+abrams_exitOpenedHatch_01				=	vehicles\us\abrams\abrams_exitOpenedHatch_01.caf
+
+
+
+// ----- cutscene ---------
+
+carry_barrel						=	cutscene\barrel_cutscene_01.caf
+
+test_*								= crouch\test*.caf 
+
+
+
+// ----- throw ------
+throw_leftarm_UB_01 = throw\throw_leftarm_UB_01.caf
+throw_leftarm_UB_02 = throw\throw_leftarm_UB_02.caf
+throw_leftarm_UB_03 = throw\throw_leftarm_UB_03.caf
+
+
+
+// ----- pickup ------
+relaxed_crouchPickUpItem_01 = relaxed\relaxed_crouchPickUpItem_01.caf
+
+
+
+// ----- baseball bat ------
+combat_swing_bat_01 = combat\combat_swing_bat_01.caf
+combat_swing_bat_UB_01 = combat\combat_swing_bat_UB_01.caf
+combat_swing_bat_UB_02 = combat\combat_swing_bat_UB_02.caf
+combat_swing_bat_UB_03 = combat\combat_swing_bat_UB_03.caf
+
+//-------HMMWV-------
+
+*		= 		vehicles\us\hmmwv\*.caf

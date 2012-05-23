@@ -1,0 +1,15 @@
+<Material MtlFlags="0" Shader="Illum" GenMask="318898192" SurfaceType="" Diffuse="0.24705884,0.24705884,0.24705884" Specular="1,1,1" Emissive="0,0,0" Shininess="10" Opacity="0.97000003">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/wood_planks.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Specular" File="textures/decals/wood_planks_spec.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Normalmap" File="textures/decals/wood_planks_ddn.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams ObmDisplacement="0.0040000002" AmbientMultiplier="1"/>
+ <MaterialLayers />
+</Material>

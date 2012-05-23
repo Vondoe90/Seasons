@@ -1,0 +1,14 @@
+<Material MtlFlags="0" Shader="Illum" GenMask="318767120" SurfaceType="" Diffuse="0.32549021,0.32549021,0.32549021" Specular="0.56862748,0.56862748,0.56862748" Emissive="0,0,0" Shininess="53.700001" Opacity="0.93099999">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/oil.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Specular" File="textures/decals/oil.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Normalmap" File="textures/decals/oil_ddn.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams AmbientMultiplier="1"/>
+</Material>

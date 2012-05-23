@@ -1,0 +1,8 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="80801" StringGenMask="%ALLOW_POM%DECAL%GLOSS_MAP" SurfaceType="mat_ice" MatTemplate="" Diffuse="0.34509805,0.34509805,0.34509805" Specular="1,1,1" Emissive="0,0,0" Shininess="30" Opacity="0.89999998">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/ice.tif" IsTileU="0" IsTileV="0"/>
+  <Texture Map="Specular" File="textures/decals/ice.tif"/>
+  <Texture Map="Bumpmap" File="textures/decals/ice_ddn.tif"/>
+ </Textures>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="4" GlossMapChannelB="0" SpecMapChannelG="0" FresnelScale="1" FresnelBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

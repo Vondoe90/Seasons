@@ -1,0 +1,14 @@
+<EquipPack name="AI" primary="SCARAI">
+ <Items>
+  <SCARAI type="ItemGivable"/>
+  <Fists type="ItemGivable"/>
+  <OffHand type="ItemGivable"/>
+ </Items>
+ <Ammos>
+  <Ammo name="bullet" amount="160"/>
+  <Ammo name="rocket" amount="0"/>
+  <Ammo name="MGbullet" amount="0"/>
+  <Ammo name="explosivegrenade" amount="0"/>
+  <Ammo name="tank125" amount="0"/>
+ </Ammos>
+</EquipPack>

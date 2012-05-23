@@ -1,0 +1,8 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="80841" StringGenMask="%ALLOW_POM%CHARACTER_DECAL%DECAL%GLOSS_MAP" SurfaceType="" MatTemplate="" Diffuse="0.16078432,0.19607845,0.27843139" Specular="1,1,1" Emissive="0,0,0" Shininess="100" Opacity="0.89999998">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/human_body.tif"/>
+  <Texture Map="Specular" File="textures/decals/human_body.tif"/>
+  <Texture Map="Bumpmap" File="textures/decals/human_body_ddn.tif"/>
+ </Textures>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="4" GlossMapChannelB="0" SpecMapChannelG="0" FresnelScale="1" FresnelBias="0" IndirectColor="0.25,0.25,0.25"/>
+</Material>

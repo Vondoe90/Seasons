@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<Params>
+	<AnimationList>
+		<Animation name="#filepath" path="animations\human\male"/>
+		<Comment value="-------EVENT DATABASE-------"/>
+		<Animation name="$AnimEventDatabase" path="animations\human\male\events.animevents"/>
+		<Animation name="$TracksDatabase" path="animations\human\male\hits_1p.dba"/>
+		<Animation name="$TracksDatabase" path="animations\human\male\locomotion.dba"/>
+		<Animation name="$TracksDatabase" path="animations\human\male\smartObjects\coop.dba"/>
+		<Animation name="$TracksDatabase" path="animations\human\male\smartObjects\cover.dba"/>
+		<Animation name="$TracksDatabase" path="animations\human\male\smartObjects\flag.dba"/>
+		<Comment value="-- DEATHS"/>
+		<Animation name="*" path="deaths\*.caf"/>
+		<Animation name="*" path="deaths\Misc\*.caf"/>
+		<Animation name="*" path="deaths\Misc\micro\*.caf"/>
+		<Animation name="*" path="deaths\expl\expl_hVel\*.caf"/>
+		<Animation name="*" path="deaths\expl\expl_mVel\*.caf"/>
+		<Animation name="*" path="deaths\loco\aVel\head\*.caf"/>
+		<Animation name="*" path="deaths\loco\aVel\legs\*.caf"/>
+		<Animation name="*" path="deaths\loco\aVel\torso\*.caf"/>
+		<Animation name="*" path="deaths\loco\aVel\head\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_hVel\torso\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_hVel\head\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_hVel\leg\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\torso\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\pelvis\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\head\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\legL\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\legR\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\crouch\*.caf"/>
+		<Comment value="-- HITS"/>
+		<Animation name="*" path="hits\1p\*.caf"/>
+		<Comment value="-- ITEMS"/>
+		<Animation name="*" path="items\ladder\*.caf"/>
+		<Animation name="*" path="items\medium\*.caf"/>
+		<Animation name="*" path="items\misc\*.caf"/>
+		<Animation name="*" path="items\small\*.caf"/>
+		<Comment value="-- LOCOMOTION"/>
+		<Animation name="*" path="locomotion\poses\*.caf"/>
+		<Animation name="*" path="locomotion\jump\*.caf"/>
+		<Animation name="*" path="locomotion\ledge\*.caf"/>
+		<Animation name="*" path="locomotion\run\*.caf"/>
+		<Animation name="*" path="locomotion\run\stand\*.caf"/>
+		<Animation name="*" path="locomotion\run\stand\start\*.caf"/>
+		<Animation name="*" path="locomotion\run\stand\stop\*.caf"/>
+		<Animation name="*" path="locomotion\slide\*.caf"/>
+		<Animation name="*" path="locomotion\sprint\*.caf"/>
+		<Animation name="*" path="locomotion\step\crouch\*.caf"/>
+		<Animation name="*" path="locomotion\step\stand\*.caf"/>
+		<Animation name="*" path="locomotion\swim\*.caf"/>
+		<Animation name="*" path="locomotion\walk\crouch\*.caf"/>
+		<Animation name="*" path="locomotion\walk\stand\*.caf"/>
+		<Animation name="*" path="locomotion\walk\stand\start\*.caf"/>
+		<Animation name="*" path="locomotion\walk\stand\stop\*.caf"/>
+    <Comment value="-- SMART OBJECTS"/>
+		<Animation name="*" path="smartObjects\*.caf"/>
+		<Animation name="*" path="smartObjects\coop\*.caf"/>
+		<Animation name="*" path="smartObjects\obstacles\*.caf"/>
+		<Animation name="*" path="smartObjects\pushables\*.caf"/>
+		<Animation name="*" path="smartObjects\flag\*.caf"/>
+		<Comment value="-- VEHICLES"/>
+		<Animation name="*" path="vehicles\ltv\*.caf"/>
+		<Animation name="*" path="vehicles\quadbike\*.caf"/>
+		<Animation name="*" path="vehicles\usLTV\*.caf"/>
+		<Comment value="-- WEAPONS"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_agl.chrparams"/>
+		<Animation name="$include" path="animations\human\male\cal\weapons\1p\1p_ay69.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_c4.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_dsg1.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_feline.chrparams"/>
+		<Animation name="$include" path="animations\human\male\cal\weapons\1p\1p_frag_gren.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_gauss.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_generic.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_grendel.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_hammer.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_hmg.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_jackal.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_jaw.chrparams"/>
+		<Animation name="$include" path="animations\human\male\cal\weapons\1p\1p_kvolt.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_ltag.chrparams"/>
+		<Animation name="$include" path="animations\human\male\cal\weapons\1p\1p_marshall.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_mike.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_mk60.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_nova.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_pickable.chrparams"/>
+		<Animation name="$include" path="animations\human\male\cal\weapons\1p\1p_revolver.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_scar.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_scarab.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_swarmer.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\1p\1p_visor.chrparams"/>
+		<Comment value=" CINEMATIC FOR MALE GENERIC SKELETON"/>
+		<Animation name="$Include" path="animations\human\story\player\player.chrparams"/>
+		<Comment value="---3P ALIAS HACKS FOR UK MILESTONE 2--------"/>
+		<Comment value="---LOCOMOTION GROUPS------"/>
+		<Animation name="_*" path="lmg\crouch\*.lmg"/>
+		<Animation name="_*" path="lmg\stand\*.lmg"/>
+		<Animation name="_*" path="lmg\vehicles\*.lmg"/>
+		<Comment value="-- MISC"/>
+		<Animation name="*" path="misc\*.caf"/>
+    <Comment value="-- SWIM ALIAS"/>
+    <Animation name="swim_tac_idle_nw_1p_01" path="locomotion\swim\swim_tac_idle_nw_3p_01.caf" />
+    <Animation name="swim_tac_strafe_nw_lft_add_1p_01" path="locomotion\swim\swim_tac_strafeunderwater_nw_lft_add_1p_01.caf" />
+    <Animation name="swim_tac_strafe_nw_lft_3p_01" path="locomotion\swim\swim_tac_strafeunderwater_nw_lft_3p_01.caf" />
+    <Animation name="swim_tac_strafe_nw_rgt_add_1p_01" path="locomotion\swim\swim_tac_strafeunderwater_nw_rgt_add_1p_01.caf" />
+    <Animation name="swim_tac_strafe_nw_rgt_3p_01" path="locomotion\swim\swim_tac_strafeunderwater_nw_rgt_3p_01.caf" />
+    <Animation name="swim_tac_bwd_underwater_nw_add_1p_01" path="locomotion\swim\swim_tac_bwd_nw_add_1p_01.caf" />
+    <Animation name="swim_tac_bwd_underwater_nw_3p_01" path="locomotion\swim\swim_tac_bwd_nw_3p_01.caf" />
+    <Animation name="swim_tac_idle_underwater_nw_1p_01" path="locomotion\swim\swim_tac_idle_underwater_nw_3p_01.caf" />
+
+		<Comment value="SLIDE ALIAS"/>
+		<Animation name="slide_tac_loop_rifle_aim_3p_01" path="locomotion\slide\slide_tac_baseloop_rifle_aim_3p_01.caf (slide_tac_rifle_AimPoses_3p_01)"/>
+		<Animation name="slide_tac_loop_rifle2_aim_3p_01" path="locomotion\slide\slide_tac_baseloop_rifle2_aim_3p_01.caf (slide_tac_rifle2_AimPoses_3p_01)"/>
+		<Animation name="slide_tac_loop_pistol_aim_3p_01" path="locomotion\slide\slide_tac_baseloop_pistol_aim_3p_01.caf (slide_tac_pistol_AimPoses_3p_01)"/>
+		<Animation name="slide_tac_loop_gren_aim_3p_01" path="locomotion\slide\slide_tac_baseloop_gren_aim_3p_01.caf (slide_tac_gren_AimPoses_3p_01)"/>
+		<Animation name="slide_tac_loop_c4_aim_3p_01" path="locomotion\slide\slide_tac_baseloop_gren_aim_3p_01.caf (slide_tac_c4_AimPoses_3p_01)"/>
+
+		<Comment value="LEDGE GRAB ALIAS"/>
+		<Animation name="ledge_tac_pullUp_jump_3p_SP_01" path="locomotion\ledge\ledge_tac_pullUp_jump_3p_01.caf"/>
+
+	</AnimationList>
+</Params>

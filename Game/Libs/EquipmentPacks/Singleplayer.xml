@@ -1,0 +1,16 @@
+<EquipPack name="Singleplayer" primary="SCAR">
+ <Items>
+  <Fists type="ItemGivable"/>
+  <Binoculars type="ItemGivable"/>
+  <OffHand type="ItemGivable"/>
+  <SCAR type="ItemGivable"/>
+  <RocketLauncher type="ItemGivable"/>
+ </Items>
+ <Ammos>
+  <Ammo name="bullet" amount="160"/>
+  <Ammo name="rocket" amount="3"/>
+  <Ammo name="MGbullet" amount="0"/>
+  <Ammo name="explosivegrenade" amount="10"/>
+  <Ammo name="tank125" amount="0"/>
+ </Ammos>
+</EquipPack>

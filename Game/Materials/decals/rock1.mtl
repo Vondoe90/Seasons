@@ -1,0 +1,6 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="801" StringGenMask="%ALLOW_TESSELATION%DECAL" SurfaceType="" MatTemplate="" Diffuse="0.35294119,0.32941177,0.23921569" Specular="0,0,0" Emissive="0,0,0" Shininess="10" Opacity="0.99000001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/rock_soft.tif"/>
+ </Textures>
+ <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.25,0.25,0.25"/>
+</Material>

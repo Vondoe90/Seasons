@@ -1,0 +1,6 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="2000040001" StringGenMask="%ALLOW_POM%GLOSS_DIFFUSEALPHA%VERTCOLORS" SurfaceType="mat_soil" MatTemplate="" Diffuse="0.33922336,0.33922336,0.33922336" Specular="2,2,2" Emissive="0,0,0" Shininess="10" Opacity="1">
+ <Textures>
+  <Texture Map="Diffuse" File="objects/props/urban/trainyard/coal_bins/coals_diff.tif"/>
+ </Textures>
+ <PublicParams FresnelPower="4" FresnelScale="1" FresnelBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

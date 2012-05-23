@@ -1,0 +1,45 @@
+# Visual Studio files
+*.suo
+*proj.user
+
+# Build files
+*[Oo]bj/
+*[Bb]in/
+
+*.mak
+*.inc
+*.lib
+*.ilk
+*.exp
+
+*.pdb
+*.obj
+*.ipch
+*.idb
+*.sdf
+*.opensdf
+*.res
+*.manifest
+*.lastbuildstate
+*.pch
+*.rc
+
+# Various
+[Tt]emp
+
+*.dmp
+*.log
+*.tlog
+
+README
+STATUS
+
+Makefile-gcc-app
+
+userSpecificData.xml
+EditorEventLog.xml
+
+USER
+Editor/UI/WipFeatures.xml
+Editor/EditorLayout.xml
+error.bmp

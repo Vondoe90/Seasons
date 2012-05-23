@@ -1,0 +1,8 @@
+<Material MtlFlags="0" Shader="Illum" GenMask="318767104" SurfaceType="" Diffuse="0.33725491,0.33725491,0.33725491" Specular="0,0,0" Emissive="0,0,0" Shininess="10" Opacity="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/dirt_8.tif" IsTileU="0" IsTileV="0">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams AmbientMultiplier="1"/>
+</Material>

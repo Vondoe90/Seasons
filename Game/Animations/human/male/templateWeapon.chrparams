@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Params>
+	<AnimationList>
+		<Animation name="*" path="weapons\[Weapon]\*.caf"/>
+		<Animation name="*" path="weapons\[Weapon]\aimPoses\*.caf"/>
+		<Animation name="_stand_tac_sprint_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_sprint_[SourceWeapon]_3p_01.lmg"/>
+		<Animation name="_stand_tac_step_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_step_[SourceWeapon]_3p_01.lmg       		(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_stand_tac_stepRot_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_stepRot_[SourceWeapon]_3p_01.lmg 			(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_crouch_tac_step_[Weapon]_[Suffix]_3p_01" path="lmg\crouch\crouch_tac_step_[SourceWeapon]_3p_01.lmg       		(crouch_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_crouch_tac_stepRot_[Weapon]_[Suffix]_3p_01" path="lmg\crouch\crouch_tac_stepRot_[SourceWeapon]_3p_01.lmg 			(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_stand_tac_run2idle_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_run2idle_[SourceWeapon]_3p_01.lmg			(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_stand_tac_Idle2Run_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_Idle2Run_[SourceWeapon]_3p_01.lmg   			(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_stand_tac_run_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_run_[SourceWeapon]_3p_01.lmg     			(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_stand_tac_walk_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_walk_[SourceWeapon]_3p_01.lmg   				(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_crouch_tac_walk_[Weapon]_[Suffix]_3p_01" path="lmg\crouch\crouch_tac_walk_[SourceWeapon]_3p_01.lmg  			(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_stand_tac_idle_[Weapon]_[Suffix]_3p_01" path="weapons\templates\[SourceWeapon]\stand_tac_idle_[SourceWeapon]_3p_01.caf		(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_crouch_tac_idle_[Weapon]_[Suffix]_3p_01" path="weapons\templates\[SourceWeapon]\crouch_tac_idle_[SourceWeapon]_3p_01.caf		(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Comment value=" [Weapon] (normal)"/>
+		<Animation name="_stand_tac_jump_start_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_jump_start_[SourceWeapon]_3p_01.lmg					(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_stand_tac_jump_fall_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_jump_fall_[SourceWeapon]_3p_01.lmg					(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_stand_tac_jump_land_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_jump_land_[SourceWeapon]_3p_01.lmg					(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Comment value=" [Weapon] (super)"/>
+		<Animation name="_stand_tac_jumpS_start_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_jumpS_start_[SourceWeapon]_3p_01.lmg				(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_stand_tac_jumpS_fall_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_jumpS_fall_[SourceWeapon]_3p_01.lmg					(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+		<Animation name="_stand_tac_jumpS_land_[Weapon]_[Suffix]_3p_01" path="lmg\stand\stand_tac_jumpS_land_[SourceWeapon]_3p_01.lmg					(stand_tac_AimPoses_idle_[Weapon]_[Suffix]_3p_01)"/>
+	</AnimationList>
+</Params>

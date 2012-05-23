@@ -1,0 +1,9 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="2000080000" StringGenMask="%GLOSS_MAP%VERTCOLORS" SurfaceType="mat_water" MatTemplate="" Diffuse="0.44705886,0.45882356,0.42352945" Specular="0.023529414,0.023529414,0.023529414" Emissive="0,0,0" Shininess="5" Opacity="0.99000001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain/roads/river_forest_foam.tif">
+   <TexMod TexMod_UOscillatorType="2" TexMod_UOscillatorRate="1" TexMod_UOscillatorAmplitude="0.34999999"/>
+  </Texture>
+  <Texture Map="Specular" File="textures/terrain/roads/river_forest_foam.tif"/>
+ </Textures>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="4" SpecMapChannelG="0" FresnelScale="1" FresnelBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

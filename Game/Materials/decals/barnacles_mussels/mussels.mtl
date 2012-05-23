@@ -1,0 +1,7 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="108000800" StringGenMask="%DECAL%PARALLAX_OCCLUSION_MAPPING%TESSELLATION" SurfaceType="" MatTemplate="" Diffuse="0.12474094,0.12474094,0.12474094" Specular="0.12198571,0.12198571,0.12198571" Emissive="0,0,0" Shininess="104" Opacity="0.99000001" AlphaTest="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/barnacles_mussels/mussels_01_diff.tif" IsTileU="0" IsTileV="0"/>
+  <Texture Map="Bumpmap" File="textures/decals/barnacles_mussels/mussels_01_ddn.tif"/>
+ </Textures>
+ <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1.1" PomDisplacement="0.050000001" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="1" GlossFromDiffuseBrightness="0.61000001" SelfShadowStrength="2.5" HeightBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

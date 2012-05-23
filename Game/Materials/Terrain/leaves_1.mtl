@@ -1,0 +1,11 @@
+<Material MtlFlags="524288" Shader="Terrain.Layer" GenMask="208040000" StringGenMask="%GLOSS_DIFFUSEALPHA%PARALLAX_OCCLUSION_MAPPING%TEMP_TERRAIN" SurfaceType="mat_soil" MatTemplate="" Diffuse="1,1,1" Specular="0.080219261,0.080219261,0.080219261" Emissive="0,0,0" Shininess="20" Opacity="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain/detail/leaves_1_diff.tif">
+   <TexMod TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/terrain/detail/leaves_1_ddn.tif">
+   <TexMod TileU="0.2" TileV="0.2"/>
+  </Texture>
+ </Textures>
+ <PublicParams FresnelPower="5" DetailTextureStrength="0.75" PomDisplacement="0.0116" FresnelScale="0.1" FresnelBias="0.1" SelfShadowStrength="3" HeightBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

@@ -1,0 +1,4 @@
+$facelib = animations/human_male/facial/setup/head.fxl
+#filepath = animations\human_male
+$Include = Objects\Characters\human_male\character.cal
+$Include = Objects\Characters\human_male\facial.cal

@@ -1,0 +1,8 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="80001" StringGenMask="%ALLOW_POM%GLOSS_MAP" SurfaceType="mat_concrete" MatTemplate="" Diffuse="0.12474094,0.12474094,0.12474094" Specular="0.20471011,0.20471011,0.20471011" Emissive="0,0,0" Shininess="10" Opacity="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/roofing/roof_tar_paper01_diff.tif"/>
+  <Texture Map="Specular" File="textures/roofing/roof_tar_paper01_spec.tif"/>
+  <Texture Map="Bumpmap" File="textures/roofing/roof_tar_paper01_ddn.tif"/>
+ </Textures>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="4" GlossMapChannelB="0" SpecMapChannelG="0" FresnelScale="1" FresnelBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

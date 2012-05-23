@@ -1,0 +1,11 @@
+<Material MtlFlags="524288" Shader="Terrain.Layer" GenMask="20A040001" StringGenMask="%ALLOW_POM%GLOSS_DIFFUSEALPHA%OFFSETBUMPMAPPING%PARALLAX_OCCLUSION_MAPPING%TEMP_TERRAIN" SurfaceType="mat_soil" MatTemplate="" Diffuse="1,1,1" Specular="0,0,0" Emissive="0,0,0" Shininess="25" Opacity="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain/detail/soil_pebbled_diff.tif">
+   <TexMod TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/terrain/detail/soil_pebbled_ddn.tif">
+   <TexMod TileU="0.2" TileV="0.2"/>
+  </Texture>
+ </Textures>
+ <PublicParams FresnelPower="4" DetailTextureStrength="2" PomDisplacement="0.0080000004" FresnelScale="1" FresnelBias="1" SelfShadowStrength="5" ObmDisplacement="0.0040000002" PomBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

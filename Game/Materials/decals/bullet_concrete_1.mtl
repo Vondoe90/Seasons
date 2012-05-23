@@ -1,0 +1,14 @@
+<Material MtlFlags="0" Shader="Illum" GenMask="318767120" SurfaceType="" Diffuse="0.33725491,0.33725491,0.33725491" Specular="0.1137255,0.1137255,0.1137255" Emissive="0,0,0" Shininess="1.5" Opacity="0.99000001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/concrete_hole_1.tif" IsTileU="0" IsTileV="0">
+   <TexMod />
+  </Texture>
+  <Texture Map="Specular" File="textures/decals/concrete_hole_1.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/decals/concrete_hole_1_ddn.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams AmbientMultiplier="1"/>
+</Material>

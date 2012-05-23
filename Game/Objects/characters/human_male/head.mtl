@@ -1,0 +1,13 @@
+<Material MtlFlags="256">
+ <SubMaterials>
+  <Material Name="head" MtlFlags="128" Shader="Illum" GenMask="285212672" SurfaceType="" Diffuse="0.41960788,0.41960788,0.41960788" Specular="0.019607844,0.019607844,0.019607844" Emissive="0,0,0" Shininess="2.8199999" Opacity="1">
+   <Textures>
+    <Texture Map="Diffuse" File="Objects/characters/human_male/sdk_texture.tif" Filter="7">
+     <TexMod />
+    </Texture>
+   </Textures>
+   <PublicParams AmbientMultiplier="1"/>
+  </Material>
+ </SubMaterials>
+ <PublicParams AmbientMultiplier="1"/>
+</Material>

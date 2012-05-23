@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<Params>
+	<AnimationList>
+		<Animation name="#filepath" path="animations\human\male"/>
+		<Comment value="-------EVENT DATABASE-------"/>
+		<Animation name="$AnimEventDatabase" path="animations\human\male\events.animevents"/>
+		<Animation name="$TracksDatabase" path="animations\human\male\locomotion.dba"/>
+		<Animation name="$TracksDatabase" path="animations\human\male\hits_3p.dba"/>
+		<Animation name="$TracksDatabase" path="animations\human\male\smartObjects\coop.dba"/>
+		<Animation name="$TracksDatabase" path="animations\human\male\smartObjects\cover.dba"/>
+		<Animation name="$TracksDatabase" path="animations\human\male\smartObjects\obstacles.dba"/>
+		<Animation name="$TracksDatabase" path="animations\human\male\behavior\shots\hit\standUp.dba"/>
+		<Comment value="-- BEHAVIORS"/>
+		<Animation name="*" path="behavior\additives\*.caf"/>
+		<Animation name="*" path="behavior\blinded\*.caf"/>
+		<Animation name="*" path="behavior\communication\*.caf"/>
+		<Animation name="*" path="behavior\environment\*.caf"/>
+		<Animation name="*" path="behavior\fear\*.caf"/>
+		<Animation name="*" path="behavior\idles\*.caf"/>
+		<Animation name="*" path="behavior\misc\*.caf"/>
+		<Animation name="*" path="behavior\reactions\*.caf"/>
+		<Animation name="*" path="behavior\readability\*.caf"/>
+		<Animation name="*" path="behavior\shots\*.caf"/>
+		<Animation name="*" path="behavior\shots\flinch\*.caf"/>
+		<Animation name="*" path="behavior\shots\hit\*.caf"/>
+		<Animation name="*" path="behavior\readability\*.caf"/>
+		<Comment value="-- DEATHS"/>
+		<Animation name="*" path="deaths\*.caf"/>
+		<Animation name="*" path="deaths\Misc\*.caf"/>
+		<Animation name="*" path="deaths\Misc\micro\*.caf"/>
+		<Animation name="*" path="deaths\expl\expl_hVel\*.caf"/>
+		<Animation name="*" path="deaths\expl\expl_mVel\*.caf"/>
+		<Animation name="*" path="deaths\loco\aVel\head\*.caf"/>
+		<Animation name="*" path="deaths\loco\aVel\legs\*.caf"/>
+		<Animation name="*" path="deaths\loco\aVel\torso\*.caf"/>
+		<Animation name="*" path="deaths\loco\aVel\head\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_hVel\torso\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_hVel\head\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_hVel\leg\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\torso\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\pelvis\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\head\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\legL\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\legR\*.caf"/>
+		<Animation name="*" path="deaths\proj\proj_mVel\crouch\*.caf"/>
+		<Comment value="-- HITS"/>
+		<Animation name="*" path="hits\3p\*.caf"/>
+		<Comment value="-- These hits are faked for the cover hit reactions setup"/>
+		
+		<Animation name="coverlow_idle_com_midLft_hit_front_01" path="hits\3p\coverlow_idleblind_com_midlft_hit_front_01.caf"/>
+		<Animation name="coverlow_idle_com_midLft_hit_back_01" path="hits\3p\coverlow_idleblind_com_midlft_hit_back_01.caf"/>
+		<Animation name="coverlow_idle_com_midRgt_hit_back_01" path="hits\3p\coverlow_idleblind_com_midrgt_hit_back_01.caf"/>
+		<Animation name="coverlow_idle_com_lft_hit_front_01" path="hits\3p\coverlow_idleblind_com_midlft_hit_front_01.caf"/>
+		
+		<Animation name="coverLow_idlePeek_com_lft_hit_front_01" path="hits\3p\coverLow_idleBlindPeek_com_lft_hit_front_01.caf"/>
+		<Animation name="coverLow_idleBlind_com_lft_hit_front_01" path="hits\3p\coverLow_idleBlindPeek_com_lft_hit_front_01.caf"/>
+		
+		<Animation name="coverlow_idle_com_rgt_hit_front_01" path="hits\3p\coverLow_idleBlindPeekShoot_com_midRgt_hit_front_01.caf"/>
+		<Animation name="coverLow_idleBlind_com_midRgt_hit_front_01" path="hits\3p\coverLow_idleBlindPeekShoot_com_midRgt_hit_front_01.caf"/>
+		<Animation name="coverLow_idlePeek_com_midRgt_hit_front_01" path="hits\3p\coverLow_idleBlindPeekShoot_com_midRgt_hit_front_01.caf"/>
+		<Animation name="coverLow_idleShoot_com_midRgt_hit_front_01" path="hits\3p\coverLow_idleBlindPeekShoot_com_midRgt_hit_front_01.caf"/>
+		
+		<Animation name="coverLow_idle_com_rgt_hit_back_01" path="hits\3p\coverLow_idlePeekBlind_com_rgt_hit_back_01.caf"/>
+		<Animation name="coverLow_idlePeek_com_rgt_hit_back_01" path="hits\3p\coverLow_idlePeekBlind_com_rgt_hit_back_01.caf"/>
+		<Animation name="coverLow_idleBlind_com_rgt_hit_back_01" path="hits\3p\coverLow_idlePeekBlind_com_rgt_hit_back_01.caf"/>
+		
+		<Animation name="coverLow_idle_com_lft_hit_back_01" path="hits\3p\coverLow_idlePeek_com_lft_hit_back_01.caf"/>
+		
+		<Animation name="coverLow_idleBlind_com_rgt_hit_front_01" path="hits\3p\coverLow_idleShootBlindPeek_com_rgt_hit_front_01.caf"/>
+		<Animation name="coverLow_idlePeek_com_rgt_hit_front_01" path="hits\3p\coverLow_idleShootBlindPeek_com_rgt_hit_front_01.caf"/>
+		
+		<Comment value="-- LOCOMOTION"/>
+		<Animation name="*" path="locomotion\poses\*.caf"/>
+		<Animation name="*" path="locomotion\juke\*.caf"/>
+		<Animation name="*" path="locomotion\jump\*.caf"/>
+		<Animation name="*" path="locomotion\run\*.caf"/>
+		<Animation name="*" path="locomotion\run\stand\*.caf"/>
+		<Animation name="*" path="locomotion\run\stand\start\*.caf"/>
+		<Animation name="*" path="locomotion\run\stand\stop\*.caf"/>
+		<Animation name="*" path="locomotion\sprint\*.caf"/>
+		<Animation name="*" path="locomotion\step\crouch\*.caf"/>
+		<Animation name="*" path="locomotion\step\relaxed\*.caf"/>
+		<Animation name="*" path="locomotion\step\stand\*.caf"/>
+		<Animation name="*" path="locomotion\swim\*.caf"/>
+		<Animation name="*" path="locomotion\walk\crouch\*.caf"/>
+		<Animation name="*" path="locomotion\walk\relaxed\*.caf"/>
+		<Animation name="*" path="locomotion\walk\relaxed\start\*.caf"/>
+		<Animation name="*" path="locomotion\walk\relaxed\stop\*.caf"/>
+		<Animation name="*" path="locomotion\walk\stand\*.caf"/>
+		<Animation name="*" path="locomotion\walk\stand\start\*.caf"/>
+		<Animation name="*" path="locomotion\walk\stand\stop\*.caf"/>
+		<Comment value="-- MISC"/>
+		<Animation name="*" path="misc\*.caf"/>
+		<Animation name="*" path="synced\*.caf"/>
+		<Animation name="*" path="infected\infect03\*.caf"/>
+		<Comment value="-- SMART OBJECTS"/>
+		<Animation name="*" path="smartObjects\*.caf"/>
+		<Animation name="*" path="smartObjects\coop\*.caf"/>
+		<Animation name="*" path="smartObjects\obstacles\*.caf"/>
+		<Animation name="*" path="smartObjects\cover\*.caf"/>
+		<Animation name="*" path="smartObjects\cover\rifle\*.caf"/>
+		<Animation name="*" path="smartObjects\cover\rifle\aimPoses\*.caf"/>
+		<Animation name="*" path="smartObjects\cover\pistol\*.caf"/>
+		<Comment value="-- VEHICLES"/>
+		<Animation name="*" path="vehicles\usFighter\*.caf"/>
+		<Animation name="*" path="vehicles\ltv\*.caf"/>
+		<Animation name="*" path="vehicles\quadbike\*.caf"/>
+		<Animation name="*" path="vehicles\usLTV\*.caf"/>
+		<Animation name="*" path="vehicles\blackopsHelicopter\*.caf"/>
+		<Comment value="-- WEAPONS"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_agl.chrparams"/>
+		<Animation name="$include" path="animations\human\male\cal\weapons\3p\3p_ay69.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_c4.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_dsg1.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_feline.chrparams"/>
+		<Animation name="$include" path="animations\human\male\cal\weapons\3p\3p_frag_gren.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_gauss.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_generic.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_grendel.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_hammer.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_hmg.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_jackal.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_jaw.chrparams"/>
+		<Animation name="$include" path="animations\human\male\cal\weapons\3p\3p_kvolt.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_ltag.chrparams"/>
+		<Animation name="$include" path="animations\human\male\cal\weapons\3p\3p_marshall.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_mike.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_mk60.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_nova.chrparams"/>
+		<Animation name="$include" path="animations\human\male\cal\weapons\3p\3p_revolver.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_scar.chrparams"/>
+		<Animation name="$Include" path="animations\human\male\cal\weapons\3p\3p_scarab.chrparams"/>
+		<Comment value=" STOWING"/>
+		<Comment value="---LOCOMOTION GROUPS------"/>
+		<Animation name="_*" path="lmg\crouch\*.lmg"/>
+		<Animation name="_*" path="lmg\cover\*.lmg"/>
+		<Animation name="_*" path="lmg\relaxed\*.lmg"/>
+		<Animation name="_*" path="lmg\stand\*.lmg"/>
+		<Animation name="_*" path="lmg\vehicles\*.lmg"/>
+		<Animation name="$Include" path="animations\human\story\genericMale\genericMale.chrparams"/>
+		<Animation name="$Include" path="animations\human\story\player\player.chrparams"/>
+		<Animation name="standUp_nwBack_01" path="behavior\shots\hit\standUp\stand_tac_standUp_nw_back_3p_01.caf"/>
+		<Animation name="standUp_nwStomach_01" path="behavior\shots\hit\standUp\stand_tac_standUp_nw_stomach_3p_01.caf"/>
+		<Animation name="standUp_pistolBack_01" path="behavior\shots\hit\standUp\stand_tac_standUp_pistol_back_3p_01.caf"/>
+		<Animation name="standUp_pistolStomach_01" path="behavior\shots\hit\standUp\stand_tac_standUp_pistol_stomach_3p_01.caf"/>
+		<Animation name="standUp_rifleBack_01" path="behavior\shots\hit\standUp\stand_tac_standUp_rifle_back_3p_01.caf"/>
+		<Animation name="standUp_rifleStomach_01" path="behavior\shots\hit\standUp\stand_tac_standUp_rifle_stomach_3p_01.caf"/>
+		
+		<Animation name="_relaxed_tac_run_rifle_3p_01" path="locomotion\poses\replaceMe_3p_01.caf"/>
+		<Animation name="_relaxed_tac_run_nw_3p_01" path="locomotion\poses\replaceMe_3p_01.caf"/>
+		<Animation name="_relaxed_tac_runStop_rifle_fwd_fast_rf_3p_01" path="locomotion\poses\replaceMe_3p_01.caf"/>
+		
+		<Comment value=" ---------------------------------------------------------------------------"/>
+		<Comment value=" Cover Aimposes"/>
+		<Comment value=" ---------------------------------------------------------------------------"/>
+		<Animation name="coverLow_tac_idleShoot_rifle_lft_01" path="smartObjects\cover\rifle\coverLow_tac_idleShoot_rifle_lft_01.caf (coverLow_tac_AimPoses_shoot_scar_lft_3p_01)"/>
+		<Animation name="coverLow_tac_idleShoot_rifle_rgt_01" path="smartObjects\cover\rifle\coverLow_tac_idleShoot_rifle_rgt_01.caf (coverLow_tac_AimPoses_shoot_scar_rgt_3p_01)"/>
+		<Animation name="coverLow_tac_idleShoot_rifle_midLft_01" path="smartObjects\cover\rifle\coverLow_tac_idleShoot_rifle_midLft_01.caf (coverLow_tac_AimPoses_shoot_scar_midLft_3p_01)"/>
+		<Animation name="coverLow_tac_idleShoot_rifle_midRgt_01" path="smartObjects\cover\rifle\coverLow_tac_idleShoot_rifle_midRgt_01.caf (coverLow_tac_AimPoses_shoot_scar_midRgt_3p_01)"/>
+		<Animation name="coverLow_tac_transAim_rifle_lft_to_rgt_01" path="smartObjects\cover\rifle\coverLow_tac_transAim_rifle_lft_to_rgt_01.caf (coverLow_tac_AimPoses_shoot_scar_midLft_3p_01)"/>
+		<Animation name="coverLow_tac_transAim_rifle_rgt_to_lft_01" path="smartObjects\cover\rifle\coverLow_tac_transAim_rifle_rgt_to_lft_01.caf (coverLow_tac_AimPoses_shoot_scar_midRgt_3p_01)"/>
+		<Animation name="coverLow_tac_idleBlind_rifle_lft_01" path="smartObjects\cover\rifle\coverLow_tac_idleBlind_rifle_lft_01.caf (coverLow_tac_AimPoses_blind_scar_lft_3p_01)"/>
+		<Animation name="coverLow_tac_idleBlind_rifle_rgt_01" path="smartObjects\cover\rifle\coverLow_tac_idleBlind_rifle_rgt_01.caf (coverLow_tac_AimPoses_blind_scar_rgt_3p_01)"/>
+		<Animation name="coverLow_tac_idleBlind_rifle_midLft_01" path="smartObjects\cover\rifle\coverLow_tac_idleBlind_rifle_midLft_01.caf (coverLow_tac_AimPoses_blind_scar_midLft_3p_01)"/>
+		<Animation name="coverLow_tac_idleBlind_rifle_midRgt_01" path="smartObjects\cover\rifle\coverLow_tac_idleBlind_rifle_midRgt_01.caf (coverLow_tac_AimPoses_blind_scar_midRgt_3p_01)"/>
+		<Animation name="coverHigh_tac_idleShoot_rifle_lft_01" path="smartObjects\cover\rifle\coverHigh_tac_idleShoot_rifle_lft_01.caf (coverHigh_tac_AimPoses_shoot_scar_lft_3p_01)"/>
+		<Animation name="coverHigh_tac_idleShoot_rifle_rgt_01" path="smartObjects\cover\rifle\coverHigh_tac_idleShoot_rifle_rgt_01.caf (coverHigh_tac_AimPoses_shoot_scar_rgt_3p_01)"/>
+		<Animation name="coverHigh_tac_idleBlind_rifle_lft_01" path="smartObjects\cover\rifle\coverHigh_tac_idleBlind_rifle_lft_01.caf (coverHigh_tac_AimPoses_blind_scar_lft_3p_01)"/>
+		<Animation name="coverHigh_tac_idleBlind_rifle_rgt_01" path="smartObjects\cover\rifle\coverHigh_tac_idleBlind_rifle_rgt_01.caf (coverHigh_tac_AimPoses_blind_scar_rgt_3p_01)"/>
+	</AnimationList>
+</Params>

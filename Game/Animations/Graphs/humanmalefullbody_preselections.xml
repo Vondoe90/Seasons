@@ -1,0 +1,60 @@
+﻿<PreselectionLists Filename="Animations\Graphs\humanmalefullbody.xml">
+
+  <Preselection Type="Basics" name="IdleHealthy_NW">
+	  	<Selection Input="Action" value="idle" />
+  		<Selection Input="Signal" value="none" />
+  		<Selection Input="Stance" value="combat" />
+  		<Selection Input="Health" value="100" />
+	  	<Selection Input="Item" value="nw" />
+	  	<Selection Input="PseudoSpeed" value="0.00" />
+	  	<Selection Input="ActualMoveSpeed" value="0.00" />
+	  	<Selection Input="ActualMoveDir4LH" value="Idle" />
+  		<Selection Input="Vehicle" value="none" />
+  </Preselection>
+
+  <Preselection Type="Basics" name="Jumping">
+	  	<Selection Input="Action" value="jumpMP" />
+  		<Selection Input="Signal" value="none" />
+  		<Selection Input="Stance" value="combat" />
+  		<Selection Input="Health" value="100" />
+	  	<Selection Input="Item" value="nw" />
+  		<Selection Input="Vehicle" value="none" />
+  </Preselection>
+
+  <Preselection Type="Basics" name="Walking_Rifle">
+	  	<Selection Input="Action" value="idle" />
+  		<Selection Input="Signal" value="none" />
+  		<Selection Input="Stance" value="combat" />
+  		<Selection Input="Health" value="100" />
+	  	<Selection Input="Item" value="rifle" />
+	  	<Selection Input="PseudoSpeed" value="0.40" />
+	  	<Selection Input="ActualMoveDir4LH" value="Fwd" />
+  		<Selection Input="Vehicle" value="none" />
+  </Preselection>
+
+  <Preselection Type="Basics" name="Running_Rifle">
+	  	<Selection Input="Action" value="idle" />
+  		<Selection Input="Signal" value="none" />
+  		<Selection Input="Stance" value="combat" />
+  		<Selection Input="Health" value="100" />
+	  	<Selection Input="Item" value="rifle" />
+	  	<Selection Input="PseudoSpeed" value="1.00" />
+	  	<Selection Input="ActualMoveDir4LH" value="Fwd" />
+  		<Selection Input="Vehicle" value="none" />
+  </Preselection>
+  
+  <!-- 
+  <Preselection Type="Basics" Name="NewSelectionSetName">
+  		<Selection Input="Vehicle" value="none" /> 		
+  		<Selection Input="waterLevel" value="5.0" />
+  		<Selection Input="Wound" value="none" />
+  </Preselection>
+  
+  <Preselection Type="Other" Name="NewSelectionSetName">
+  		<Selection Input="Vehicle" value="none" /> 		
+  		<Selection Input="waterLevel" value="5.0" />
+  		<Selection Input="Wound" value="none" />
+  </Preselection>
+	-->
+	  
+</PreselectionLists>

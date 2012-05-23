@@ -1,0 +1,11 @@
+<Material MtlFlags="524328" Shader="Illum" GenMask="200A080901" StringGenMask="%ALLOW_POM%ALLOW_TESSELATION%DECAL%GLOSS_MAP%OFFSETBUMPMAPPING%PARALLAX_OCCLUSION_MAPPING%VERTCOLORS" SurfaceType="mat_concrete" MatTemplate="" Diffuse="0.18354899,0.20835964,0.24680044" Specular="0.051122054,0.047775757,0.04145189" Emissive="0,0,0" Shininess="80" Opacity="0.99000001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain/roads/road_muddy_off_12.dds" Filter="6">
+   <TexMod TileU="0.80000001" OffsetU="1" OffsetV="1"/>
+  </Texture>
+  <Texture Map="Specular" File="textures/terrain/roads/road_muddy_off_12_spec.tif"/>
+  <Texture Map="Bumpmap" File="textures/terrain/roads/road_muddy_off_12_ddn.tif"/>
+ </Textures>
+ <DetailDecal Opacity="128" SSAOAmount="0" topTileU="1" topTileV="1" topOffsV="0" topOffsU="0" topRotation="0" topDeformation="0" topSortOffset="0" bottomTileU="0.5" bottomTileV="0.5" bottomOffsV="0.5" bottomOffsU="0.5" bottomRotation="0" bottomDeformation="0" bottomSortOffset="0"/>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="4" GlossMapChannelB="0" PomDisplacement="0.029999999" SpecMapChannelG="0" FresnelScale="1" FresnelBias="1" SelfShadowStrength="3" ObmDisplacement="0.0099999998" PomBias="0" IndirectColor="0.25,0.25,0.25"/>
+</Material>

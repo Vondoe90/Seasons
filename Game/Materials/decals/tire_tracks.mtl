@@ -1,0 +1,6 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="800" StringGenMask="%DECAL" SurfaceType="" MatTemplate="" Diffuse="0.030256517,0.030256517,0.030256517" Specular="0,0,0" Emissive="0,0,0" Opacity="0.745">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/terrain/decal_tracks_01.tif"/>
+ </Textures>
+ <PublicParams FresnelScale="1" FresnelPower="4" FresnelBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

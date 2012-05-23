@@ -1,0 +1,14 @@
+<Material MtlFlags="0" Shader="Illum" GenMask="318767120" SurfaceType="" Diffuse="0.68627453,0.77254909,0.78039223" Specular="1.3578824,1.3578824,1.3578824" Emissive="0.80784321,0.80784321,0.80784321" Shininess="6" Opacity="0.88999999">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/glass_crack.tif" IsTileU="0" IsTileV="0">
+   <TexMod />
+  </Texture>
+  <Texture Map="Specular" File="textures/decals/glass_crack.tif">
+   <TexMod />
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/decals/glass_crack_ddn.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams AmbientMultiplier="1"/>
+</Material>

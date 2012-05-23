@@ -1,0 +1,12 @@
+<Material MtlFlags="9" Shader="Illum" GenMask="452984832" SurfaceType="mat_rock" Diffuse="0.52156866,0.50980395,0.4784314" Specular="0,0,0" Emissive="0,0,0" Shininess="10" Opacity="0.80000001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain/decals/decal_dry_grass_on_soil_and_pepples.tif" Filter="7">
+   <TexMod />
+  </Texture>
+  <Texture Map="Normalmap" File="textures/terrain/decals/decal_dry_grass_on_soil_and_pepples_ddn.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams PomDisplacement="0.029999999" SelfShadowStrength="3" AmbientMultiplier="1"/>
+ <MaterialLayers />
+</Material>

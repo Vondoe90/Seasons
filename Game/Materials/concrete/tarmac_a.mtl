@@ -1,0 +1,10 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="80001" StringGenMask="%ALLOW_TESSELATION%GLOSS_MAP" SurfaceType="mat_concrete" MatTemplate="" Diffuse="0.31576276,0.35865393,0.36859095" Specular="0,0,0" Emissive="0,0,0" Shininess="10" Opacity="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/concrete/wall/wall_cracked_diff.dds">
+   <TexMod TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Specular" File="textures/concrete/ground/ground_concr_tile_2_highpass_spec.tif"/>
+  <Texture Map="Bumpmap" File="textures/concrete/ground/ground_concr_tile_2_ddn.tif"/>
+ </Textures>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="4" GlossMapChannelB="0" SpecMapChannelG="0" FresnelScale="1" FresnelBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

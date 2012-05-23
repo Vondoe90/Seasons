@@ -1,0 +1,11 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="1" StringGenMask="%ALLOW_TESSELATION" SurfaceType="mat_concrete" MatTemplate="" Diffuse="0.48195225,0.48195225,0.48195225" Specular="0,0,0" Emissive="0,0,0" Shininess="10" Opacity="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/concrete/wall/concrete_a2_diff.tif">
+   <TexMod TileU="0.30000001" TileV="0.30000001"/>
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/concrete/wall/concrete_a2_ddn.tif">
+   <TexMod TileU="0.30000001" TileV="0.30000001"/>
+  </Texture>
+ </Textures>
+ <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.25,0.25,0.25"/>
+</Material>

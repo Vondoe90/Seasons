@@ -1,0 +1,7 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="801" StringGenMask="%ALLOW_POM%DECAL" SurfaceType="" MatTemplate="" Diffuse="0.21176501,0.21176501,0.21176501" Specular="0,0,0" Emissive="0,0,0" Opacity="0.99000001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/sprites/new_blood/wblood_4.tif"/>
+  <Texture Map="Environment" File="textures/cubemaps/blue_sky.dds"/>
+ </Textures>
+ <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.25,0.25,0.25"/>
+</Material>

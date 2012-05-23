@@ -1,0 +1,17 @@
+<EquipPack name="Debug" primary="DebugGun">
+ <Items>
+  <DebugGun type="ItemGivable"/>
+  <Fists type="ItemGivable"/>
+  <Binoculars type="ItemGivable"/>
+  <OffHand type="ItemGivable"/>
+  <SCAR type="ItemGivable"/>
+  <RocketLauncher type="ItemGivable"/>
+ </Items>
+ <Ammos>
+  <Ammo name="bullet" amount="9999"/>
+  <Ammo name="rocket" amount="9999"/>
+  <Ammo name="explosivegrenade" amount="0"/>
+  <Ammo name="tank125" amount="0"/>
+  <Ammo name="MGbullet" amount="0"/>
+ </Ammos>
+</EquipPack>

@@ -1,0 +1,8 @@
+<Material MtlFlags="524290" Shader="Illum" GenMask="80801" StringGenMask="%ALLOW_POM%DECAL%GLOSS_MAP" SurfaceType="" MatTemplate="" Diffuse="0.64705884,0.64705884,0.64705884" Specular="1,1,1" Emissive="0,0,0" Shininess="10" Opacity="0.99000001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/glass_broken.tif"/>
+  <Texture Map="Specular" File="textures/decals/glass_broken_spec.tif"/>
+  <Texture Map="Bumpmap" File="textures/decals/glass_broken_ddn.tif"/>
+ </Textures>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="4" GlossMapChannelB="0" SpecMapChannelG="0" FresnelScale="0.56" FresnelBias="0" IndirectColor="0.25,0.25,0.25"/>
+</Material>

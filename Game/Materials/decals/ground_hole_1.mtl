@@ -1,0 +1,11 @@
+<Material MtlFlags="32" Shader="Illum" GenMask="318898176" SurfaceType="" Diffuse="0.29803923,0.29803923,0.29803923" Specular="0.047058828,0.047058828,0.047058828" Emissive="0,0,0" Shininess="10" Opacity="0.94">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/ground_hole.tif" IsTileU="0" IsTileV="0">
+   <TexMod />
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/decals/ground_hole_ddn.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams ObmDisplacement="0.02" AmbientMultiplier="1"/>
+</Material>

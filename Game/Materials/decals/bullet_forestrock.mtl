@@ -1,0 +1,8 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="100000800" StringGenMask="%DECAL%STAT_BRANCHING" SurfaceType="" MatTemplate="" Diffuse="0.43921572,0.43921572,0.38039219" Emissive="0,0,0" Shininess="53.700001" Opacity="0.77200001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/bullet_rockforest.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams AmbientMultiplier="1"/>
+</Material>

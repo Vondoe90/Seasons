@@ -1,0 +1,6 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="801" StringGenMask="%ALLOW_POM%DECAL" SurfaceType="" MatTemplate="" Diffuse="0.18014428,0.080219261,0.11926401" Specular="0,0,0" Emissive="0,0,0" Shininess="10" Opacity="0.94099998">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/algen1.tif" IsTileU="0" IsTileV="0"/>
+ </Textures>
+ <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.25,0.25,0.25"/>
+</Material>

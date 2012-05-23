@@ -1,0 +1,10 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="2000084801" StringGenMask="%ALLOW_POM%DECAL%DISABLE_RAIN_PASS%GLOSS_MAP%VERTCOLORS" SurfaceType="mat_soil" MatTemplate="" Diffuse="0.56470591,0.56470591,0.56470591" Specular="0.14509805,0.14509805,0.14509805" Emissive="0,0,0" Shininess="10" Opacity="0.99000001">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain/roads/forresttrail1.tif" Filter="5">
+   <TexMod TexMod_URotateRate="90" TexMod_URotatePhase="90" TexMod_URotateAmplitude="90" TexMod_VRotateRate="90" TexMod_VRotatePhase="90" TexMod_VRotateAmplitude="90" TexMod_WRotateRate="90" TexMod_WRotatePhase="90" TexMod_WRotateAmplitude="90" TexMod_URotateCenter="90" TexMod_VRotateCenter="90" TexMod_WRotateCenter="90"/>
+  </Texture>
+  <Texture Map="Specular" File="textures/terrain/roads/forresttrail1_spec.tif"/>
+  <Texture Map="Bumpmap" File="textures/terrain/roads/forresttrail1_ddn.tif"/>
+ </Textures>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="4" GlossMapChannelB="0" SpecMapChannelG="0" FresnelScale="1" FresnelBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

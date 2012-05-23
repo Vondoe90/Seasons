@@ -1,0 +1,9 @@
+<Material Diffuse="0.376471,0.443137,0.509804" Emissive="0,0,0" GenMask="0" MtlFlags="0" Opacity="1" Shader="Common.Cloud" Shininess="10" Specular="0.533333,0.560784,0.607843" SurfaceType="" >
+ <Textures>
+  <Texture File="textures/clouds/cumulus_01.dds" Map="Diffuse" >
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams CloudAngularAtten="42.05" CloudBacklightingScale="1" CloudOutlineSlope="1" CloudOutlineThreshold="0.4" Opacity="1" />
+ <MaterialLayers />
+</Material>

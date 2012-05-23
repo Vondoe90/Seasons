@@ -1,0 +1,8 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="90801" StringGenMask="%ALLOW_TESSELATION%DECAL%ENVIRONMENT_MAP%GLOSS_MAP" SurfaceType="" MatTemplate="" Diffuse="0.42352945,0.42352945,0.42352945" Specular="0.13333334,0.13333334,0.13333334" Emissive="0,0,0" Shininess="102.9" Opacity="0.94099998">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/decals/mud_puddle_1.tif" IsTileU="0" IsTileV="0"/>
+  <Texture Map="Specular" File="textures/decals/mud_puddle_1_spec.tif"/>
+  <Texture Map="Environment" File="textures/cubemaps/cxpcube.dds"/>
+ </Textures>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="4" GlossMapChannelB="0" SpecMapChannelG="0" FresnelScale="0.37" FresnelBias="0" IndirectColor="0.25,0.25,0.25"/>
+</Material>

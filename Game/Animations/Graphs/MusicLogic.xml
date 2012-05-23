@@ -1,0 +1,176 @@
+<AnimationSetup version="1" expensiveLocomotionSelection="1">
+ <Character filename="Objects/characters/neutral_male/sdk_character_male.cdf"/>
+ <Inputs>
+  <FloatState name="AI_Intensity" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="0" max="1000"/>
+  <FloatState name="Allow_Change" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="0" max="1000"/>
+  <FloatState name="Game_Intensity" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="0" max="1000"/>
+  <KeyState name="LevelName" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" defaultValue="none">
+   <Key value="harbor"/>
+   <Key value="island"/>
+   <Key value="mine"/>
+   <Key value="none"/>
+   <Key value="village"/>
+  </KeyState>
+  <KeyState name="Mode" signalled="0" priority="200" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" defaultValue="running">
+   <Key value="pauseAll"/>
+   <Key value="pauseTheme"/>
+   <Key value="running"/>
+  </KeyState>
+  <FloatState name="Player_Intensity" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="0" max="1000"/>
+  <FloatState name="PlayingTime_Mood" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="0" max="1000"/>
+  <FloatState name="PlayingTime_Music" signalled="0" priority="10" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="1" mixinFilter="0" min="0" max="1000"/>
+  <FloatState name="PlayingTime_Silence" signalled="0" priority="1" attachToBlendWeight="-1" blendWeightMoveSpeed="0" forceGuard="0" mixinFilter="0" min="0" max="1000"/>
+ </Inputs>
+ <States>
+  <State id="+Stinger_ToApprehensive" allowSelect="0" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <Template delay_finish="0.1" name="MusicStinger"/>
+  </State>
+  <State id="+apprehensive" allowSelect="1" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <SelectWhen>
+    <Game_Intensity min="100" max="510"/>
+    <PlayingTime_Music min="0" max="270"/>
+   </SelectWhen>
+   <Template StartFromBeginning="0" delay_finish="30" delay_start="0" mood="apprehensive" speedupthreshold="300" name="MusicMood"/>
+  </State>
+  <State id="+captured" allowSelect="1" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="1" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <SelectWhen>
+    <Game_Intensity min="3000" max="10000"/>
+   </SelectWhen>
+   <Template StartFromBeginning="0" delay_finish="20" delay_start="0" mood="captured" speedupthreshold="" name="MusicMood"/>
+  </State>
+  <State id="+endambient" allowSelect="0" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <Template StartFromBeginning="1" aim_pose="" allow_change="" animation="" delay_finish="10" delay_start="" fadetype="2" forcelimit="10" mood="silence" playback_speed="" speedupthreshold="1000" structure="" transition_time="" name="EndMusic"/>
+  </State>
+  <State id="+endmusic" allowSelect="0" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <SelectWhen>
+    <PlayingTime_Music min="265" max="1000"/>
+   </SelectWhen>
+   <Template delay_finish="45" fadetype="2" forcelimit="30" name="EndMusic"/>
+  </State>
+  <State id="+low_mood_hub" allowSelect="1" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <SelectWhen>
+    <Game_Intensity min="0" max="110"/>
+   </SelectWhen>
+   <Template name="Default"/>
+  </State>
+  <State id="+mood_hub" allowSelect="0" includeInGame="1" canMix="0" cost="800" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <Template name="Default"/>
+  </State>
+  <State id="+nothing" allowSelect="1" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <Template StartFromBeginning="" delay_finish="1" delay_start="0" mood="silence" speedupthreshold="" name="MusicMood"/>
+  </State>
+  <State id="+relaxed" allowSelect="1" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <SelectWhen>
+    <Game_Intensity min="100" max="250"/>
+    <PlayingTime_Music min="0" max="270"/>
+   </SelectWhen>
+   <Template StartFromBeginning="0" delay_finish="20" delay_start="0" mood="relaxed" speedupthreshold="250" name="MusicMood"/>
+  </State>
+  <State id="+relaxed_for_low_mood_hub" allowSelect="0" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="1" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <Template StartFromBeginning="1" delay_finish="60" delay_start="0" mood="relaxed" speedupthreshold="100" name="MusicMood"/>
+  </State>
+  <State id="+silence" allowSelect="0" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="1" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <SelectWhen>
+    <PlayingTime_Music min="0" max="265"/>
+   </SelectWhen>
+   <Template StartFromBeginning="1" delay_finish="10" delay_start="0" mood="silence" speedupthreshold="10000" name="MusicMood"/>
+  </State>
+  <State id="+silence_from_end" allowSelect="0" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <Template StartFromBeginning="1" delay_finish="90" delay_start="0" mood="silence" speedupthreshold="10000" name="MusicMood"/>
+  </State>
+  <State id="+silence_low_mood_hub" allowSelect="0" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <Template StartFromBeginning="1" delay_finish="45" delay_start="0" mood="silence" speedupthreshold="100" name="MusicMood"/>
+  </State>
+  <State id="+threat" allowSelect="1" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <SelectWhen>
+    <Game_Intensity min="500" max="1000"/>
+    <PlayingTime_Music min="0" max="270"/>
+   </SelectWhen>
+   <Template StartFromBeginning="0" delay_finish="20" delay_start="0" mood="threat" speedupthreshold="300" name="MusicMood"/>
+  </State>
+  <State id="Alive" allowSelect="0" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="1" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5">
+   <Template name="Default"/>
+  </State>
+  <State id="ParentThemeState" allowSelect="0" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <SelectWhen>
+    <Mode value="running"/>
+   </SelectWhen>
+   <Template name="Default"/>
+  </State>
+  <State id="disable_all" allowSelect="1" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="ParentThemeState">
+   <SelectWhen>
+    <Mode value="pauseTheme"/>
+   </SelectWhen>
+   <Template name="Default"/>
+  </State>
+  <State id="disable_theme" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="ParentThemeState">
+   <SelectWhen>
+    <Mode value="pauseTheme"/>
+   </SelectWhen>
+   <Template name="Default"/>
+   <MixIn id="+Moods"/>
+  </State>
+  <State id="pause_all" allowSelect="1" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="1" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="Alive">
+   <SelectWhen>
+    <Mode value="pauseAll"/>
+   </SelectWhen>
+   <Template name="Default"/>
+  </State>
+  <State id="theme_any" allowSelect="1" includeInGame="1" canMix="1" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="ParentThemeState">
+   <SelectWhen>
+    <Mode value="running"/>
+   </SelectWhen>
+   <Template delay_finish="1" delay_start="1" theme="" name="MusicTheme"/>
+   <MixIn id="+Moods"/>
+  </State>
+  <State id="theme_hub" allowSelect="0" includeInGame="1" canMix="0" cost="100" MovementControlMethodH="3" MovementControlMethodV="1" animationControlledView="0" hurryable="0" NoCollider="0" additionalTurnMultiplier="3" skipFirstPerson="0" snapshotTime="0.5" extend="ParentThemeState">
+   <Template name="Default"/>
+  </State>
+ </States>
+ <Transitions>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+Stinger_ToApprehensive" to="+apprehensive"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+apprehensive" to="+endmusic"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+apprehensive" to="+silence"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+apprehensive" to="+threat"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+captured" to="+endmusic"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+captured" to="+threat"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+endmusic" to="+silence_from_end"/>
+  <Link forceFollowChance="0" cost="25" transitionTime="0" from="+low_mood_hub" to="+Stinger_ToApprehensive"/>
+  <Link forceFollowChance="1" cost="100" transitionTime="0" from="+low_mood_hub" to="+relaxed_for_low_mood_hub"/>
+  <Link forceFollowChance="5" cost="100" transitionTime="0" from="+low_mood_hub" to="+silence_low_mood_hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+relaxed_for_low_mood_hub" to="+low_mood_hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+silence" to="+low_mood_hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+silence_from_end" to="+low_mood_hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+silence_low_mood_hub" to="+low_mood_hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+threat" to="+apprehensive"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+threat" to="+captured"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="+threat" to="+endmusic"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="disable_all" to="theme_hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="disable_theme" to="theme_hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="theme_any" to="theme_hub"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="theme_hub" to="disable_all"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="theme_hub" to="disable_theme"/>
+  <Link forceFollowChance="0" cost="100" transitionTime="0" from="theme_hub" to="theme_any"/>
+ </Transitions>
+ <Views>
+  <View name="+Moods">
+   <State id="+Stinger_ToApprehensive" x="-360" y="20"/>
+   <State id="+apprehensive" x="-300" y="140"/>
+   <State id="+captured" x="-270" y="320"/>
+   <State id="+endmusic" x="-960" y="230"/>
+   <State id="+low_mood_hub" x="-740" y="20"/>
+   <State id="+relaxed_for_low_mood_hub" x="-640" y="-100"/>
+   <State id="+silence" x="-690" y="140"/>
+   <State id="+silence_from_end" x="-1000" y="140"/>
+   <State id="+silence_low_mood_hub" x="-970" y="-100"/>
+   <State id="+threat" x="-260" y="230"/>
+  </View>
+  <View name="Themes">
+   <State id="disable_all" x="-220" y="-410"/>
+   <State id="disable_theme" x="-30" y="-410"/>
+   <State id="pause_all" x="-110" y="-500"/>
+   <State id="theme_any" x="-170" y="-150"/>
+   <State id="theme_hub" x="-160" y="-300"/>
+  </View>
+ </Views>
+</AnimationSetup>

@@ -1,0 +1,7 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="2000040001" StringGenMask="%ALLOW_POM%GLOSS_DIFFUSEALPHA%VERTCOLORS" SurfaceType="mat_concrete" MatTemplate="" Diffuse="0.096266121,0.086901255,0.078056589" Specular="0.43921572,0.43921572,0.43921572" Emissive="0,0,0" Shininess="10" Opacity="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/concrete/ground/sidewalk_stones_diff.tif"/>
+  <Texture Map="Bumpmap" File="textures/concrete/ground/sidewalk_stones_ddn.tif"/>
+ </Textures>
+ <PublicParams FresnelPower="4" FresnelScale="1" FresnelBias="1" IndirectColor="0.25,0.25,0.25"/>
+</Material>

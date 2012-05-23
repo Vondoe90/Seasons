@@ -1,0 +1,9 @@
+<Material MtlFlags="0" Shader="DistanceClouds" GenMask="0" SurfaceType="" Diffuse="1,1,1" Specular="0,0,0" Emissive="0,0,0" Shininess="10" Opacity="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/clouds/cloud_dense2_distant.tif">
+   <TexMod />
+  </Texture>
+ </Textures>
+ <PublicParams Attenuation="0.49900001" StepSize="0.139" AlphaSaturation="2.0680001" SunColorMultiplier="1.22" SkyColorMultiplier="0.37"/>
+ <MaterialLayers />
+</Material>

@@ -1,0 +1,12 @@
+<LocomotionGroup>
+
+  <BLENDTYPE type="IROT" />
+
+  <ExampleList>
+    <Example Position=" 0,-1, 0" AName="usLTV_gunnerAimUp_3p_01" />
+    <Example Position=" 0, 0, 0" AName="usLTV_gunnerAimCenter_3p_01" />
+    <Example Position=" 0, 1, 0" AName="usLTV_gunnerAimDown_3p_01" />
+  </ExampleList>
+
+
+</LocomotionGroup>

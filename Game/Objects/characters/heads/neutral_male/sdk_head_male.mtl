@@ -1,0 +1,26 @@
+<Material MtlFlags="524544">
+ <SubMaterials>
+  <Material Name="head" MtlFlags="524416" Shader="HumanSkin" GenMask="10100080000" StringGenMask="%GLOSS_MAP%TEMP_SKIN%TESSELLATION" SurfaceType="mat_flesh" MatTemplate="" Diffuse="0.089193508,0.089193508,0.089193508" Specular="0.12752977,0.12752977,0.12752977" Emissive="0,0,0" Shininess="28" Opacity="1">
+   <Textures>
+    <Texture Map="Diffuse" File="objects/characters/heads/neutral_male/head_diff.tif"/>
+    <Texture Map="Specular" File="objects/characters/heads/neutral_male/head_diff.tif"/>
+    <Texture Map="Bumpmap" File="objects/characters/heads/neutral_male/head_ddn.tif"/>
+   </Textures>
+   <PublicParams FresnelPower="5" ScatterRadius="2" Melanin="0.30000001" FresnelScale="4" RimStrength="0.30000001" FresnelBias="0.34999999" SecondarySpecGloss="32" SecondarySpecStrength="1" IndirectColor="0.25,0.25,0.25"/>
+   <MaterialLayers>
+    <Layer Name="FrozenLayerWip" NoDraw="0">
+     <PublicParams VariationTilling="0" TillingV="1" TintColor="1,1,1" ReflectionAmount="0.29699999" TillingU="1" TopSnowAmount="0.47499999" IndirectColor="0.25,0.25,0.25"/>
+    </Layer>
+    <Layer />
+    <Layer />
+   </MaterialLayers>
+  </Material>
+  <Material Name="eyeLeashes" MtlFlags="540802" Shader="Eye" GenMask="40020000" StringGenMask="%EYE_OVERLAY%TEMP_EYES" SurfaceType="mat_flesh" MatTemplate="" Diffuse="0.037028514,0.025371276,0.022012994" Specular="0,0,0" Emissive="0,0,0" Shininess="1.5" Opacity="0.99000001">
+   <Textures>
+    <Texture Map="Diffuse" File="objects/characters/heads/neutral_male/uveyeleash_diff.dds" Filter="1"/>
+   </Textures>
+   <PublicParams FresnelPower="4" DepthBiasScale="0.1" FresnelScale="0.37" FresnelBias="0.109" OcclusionStrength="1" IndirectColor="0.25,0.25,0.25"/>
+  </Material>
+ </SubMaterials>
+ <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.25,0.25,0.25"/>
+</Material>

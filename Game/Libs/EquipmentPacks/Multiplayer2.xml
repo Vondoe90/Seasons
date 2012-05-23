@@ -1,0 +1,16 @@
+<!-- Evgeny's pack: no scar -->
+
+<EquipPack name="Multiplayer2" primary="Fists">
+ <Items>
+  <Fists type="ItemGivable"/>
+  <Binoculars type="ItemGivable"/>
+  <OffHand type="ItemGivable"/>
+  <RocketLauncher type="ItemGivable"/>
+ </Items>
+ <Ammos>
+  <Ammo name="rocket" amount="0"/>
+  <Ammo name="MGbullet" amount="0"/>
+  <Ammo name="explosivegrenade" amount="0"/>
+  <Ammo name="tank125" amount="0"/>
+ </Ammos>
+</EquipPack>
