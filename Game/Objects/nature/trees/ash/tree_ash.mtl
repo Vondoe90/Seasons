@@ -1,23 +1,22 @@
 <Material MtlFlags="524544">
  <SubMaterials>
-  <Material Name="branch" MtlFlags="524416" Shader="Vegetation" GenMask="400C01020" StringGenMask="%BLENDLAYER%DETAIL_BENDING%LEAVES%MERGED_TEXTURES%TEMP_VEGETATION" SurfaceType="mat_grass" MatTemplate="" Diffuse="0.238828,0.238828,0.238828" Specular="0.017394712,0.017394712,0.017394712" Emissive="0,0,0" Shininess="10" Opacity="1" AlphaTest="0.30000001">
+  <Material Name="branch" MtlFlags="524416" Shader="Vegetation" GenMask="400C01020" StringGenMask="%BLENDLAYER%DETAIL_BENDING%LEAVES%MERGED_TEXTURES%TEMP_VEGETATION" SurfaceType="mat_grass" MatTemplate="" Diffuse="0.50543249,0.50543249,0.50543249" Specular="0.063814871,0.063814871,0.063814871" Emissive="0,0,0" Shininess="10" Opacity="1" AlphaTest="0.25">
    <Textures>
-    <Texture Map="Diffuse" File="objects/brushy/trees/ash/ash_branch_spring_diff.dds"/>
-    <Texture Map="Specular" File="objects/brushy/trees/ash/ash_branch_spec.dds"/>
-    <Texture Map="Bumpmap" File="objects/brushy/trees/ash/ash_branch_ddn.dds"/>
-    <Texture Map="Opacity" File="objects/brushy/trees/ash/ash_branch_blend.dds"/>
-    <Texture Map="Custom" File="objects/brushy/trees/ash/ash_branch_autumn_diff.dds"/>
-    <Texture Map="[1] Custom" File="objects/brushy/trees/ash/ash_branch_ddn.dds"/>
+    <Texture Map="Diffuse" File="objects/nature/trees/ash/textures/ash_branch_spring_diff.dds"/>
+    <Texture Map="Specular" File="objects/nature/trees/ash/textures/ash_branch_spec.dds"/>
+    <Texture Map="Bumpmap" File="objects/nature/trees/ash/textures/ash_branch_ddn.dds"/>
+    <Texture Map="Opacity" File="objects/nature/trees/ash/textures/ash_branch_blend.dds"/>
+    <Texture Map="Custom" File="objects/nature/trees/ash/textures/ash_branch_autumn_diff.dds"/>
+    <Texture Map="[1] Custom" File="objects/nature/trees/ash/textures/ash_branch_ddn.dds"/>
    </Textures>
-   <PublicParams BlendFalloff="10" bendDetailLeafAmplitude="1" BackShadowBias="0.30000001" FresnelPower="4" bendDetailFrequency="2" bendDetailBranchAmplitude="3" BlendLayer2Tiling="1" FresnelScale="1" FresnelBias="1" CapOpacityFalloff="1" BackViewDep="0.1" BackDiffuseMultiplier="0.55000001" BackDiffuse="0.44787085,0.44787085,0.44787085" BlendFactor="0" IndirectColor="0.24680044,0.24680044,0.24680044"/>
+   <PublicParams BlendFalloff="10" bendDetailLeafAmplitude="1" BackShadowBias="0.40000001" FresnelPower="4" bendDetailFrequency="2" bendDetailBranchAmplitude="3" BlendLayer2Tiling="1" FresnelScale="1" FresnelBias="1" CapOpacityFalloff="1" BackViewDep="0.1" BackDiffuseMultiplier="0.5" BackDiffuse="0.50543249,0.50543249,0.50543249" BlendFactor="0" IndirectColor="0.24680044,0.24680044,0.24680044"/>
   </Material>
-  <Material Name="bark" MtlFlags="524416" Shader="Vegetation" GenMask="400000020" StringGenMask="%BLENDLAYER%TEMP_VEGETATION" SurfaceType="mat_wood" MatTemplate="" Diffuse="0.21204439,0.21204439,0.21204439" Specular="0,0,0" Emissive="0,0,0" Opacity="1">
+  <Material Name="bark" MtlFlags="524416" Shader="Illum" GenMask="100000000" StringGenMask="%TESSELLATION" SurfaceType="mat_wood" MatTemplate="" Diffuse="0.44787085,0.44787085,0.44787085" Specular="0,0,0" Emissive="0,0,0" Opacity="1">
    <Textures>
-    <Texture Map="Diffuse" File="objects/brushy/trees/ash/ash_bark_summer_diff.dds"/>
-    <Texture Map="Opacity" File="objects/brushy/trees/ash/ash_bark_blend.dds"/>
-    <Texture Map="Custom" File="objects/brushy/trees/ash/ash_bark_winter_diff.dds"/>
+    <Texture Map="Diffuse" File="objects/nature/trees/ash/textures/ash_bark_summer_diff.dds"/>
+    <Texture Map="Bumpmap" File="objects/nature/trees/ash/textures/ash_bark_summer_ddn.dds"/>
    </Textures>
-   <PublicParams BlendFalloff="10" bendDetailLeafAmplitude="0.2" FresnelPower="4" bendDetailFrequency="1" bendDetailBranchAmplitude="-0.5" BlendLayer2Tiling="1" FresnelScale="1" FresnelBias="1" BlendFactor="0" IndirectColor="0.54799354,0.54799354,0.54799354"/>
+   <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.25,0.25,0.25"/>
    <MaterialLayers>
     <Layer Name="Ice" NoDraw="0">
      <PublicParams AirBubblesVisibility="0" AirBubblesOffsetScale="0" g_fScatterTile="1500000" g_PSRefractionAmount="0.81" scatterShadowColor="0.14,0.82700002,0.88999999" g_absorbCoeffR="1" AirBubblesTilesScale="1" g_absorbCoeffB="0.1" g_absorbCoeffG="0.55000001" AirBubblesShift="0.1" g_RefractionAmount="0.81" Absorption="15" IndirectColor="0.25,0.25,0.25"/>
