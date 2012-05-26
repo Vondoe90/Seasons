@@ -1,8 +1,0 @@
-<Material MtlFlags="524288" Shader="Terrain.Layer" GenMask="200040001" StringGenMask="%ALLOW_POM%GLOSS_DIFFUSEALPHA%TEMP_TERRAIN" SurfaceType="mat_soil" MatTemplate="" Diffuse="1,1,1" Specular="0,0,0" Emissive="0,0,0" Shininess="8.8999996" Opacity="1">
- <Textures>
-  <Texture Map="Diffuse" File="textures/terrain/detail/pine_needles03.tif">
-   <TexMod TileU="0.5" TileV="0.5"/>
-  </Texture>
- </Textures>
- <PublicParams FresnelScale="1" FresnelPower="4" FresnelBias="1" DetailTextureStrength="1" IndirectColor="0.25,0.25,0.25"/>
-</Material>

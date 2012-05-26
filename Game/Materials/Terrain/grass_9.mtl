@@ -1,8 +1,0 @@
-<Material MtlFlags="524288" Shader="Terrain.Layer" GenMask="200040000" StringGenMask="%GLOSS_DIFFUSEALPHA%TEMP_TERRAIN" SurfaceType="mat_grass" MatTemplate="" Diffuse="1,1,1" Specular="0,0,0" Emissive="0,0,0" Shininess="34.299999" Opacity="1">
- <Textures>
-  <Texture Map="Diffuse" File="textures/terrain/detail/grass05.tif">
-   <TexMod TileU="0.25" TileV="0.25"/>
-  </Texture>
- </Textures>
- <PublicParams FresnelPower="4" DetailTextureStrength="0.2" FresnelScale="1" FresnelBias="1" IndirectColor="0.25,0.25,0.25"/>
-</Material>

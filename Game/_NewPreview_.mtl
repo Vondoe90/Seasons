@@ -1,0 +1,12 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="100080000" StringGenMask="%GLOSS_MAP%TESSELLATION" SurfaceType="mat_grass" MatTemplate="" Diffuse="1,1,1" Specular="0.0017347049,0.0017347049,0.0017347049" Emissive="0,0,0" Shininess="80" Opacity="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain/ground/grass_tt_diff.dds">
+   <TexMod TileU="0.60000002" TileV="0.60000002"/>
+  </Texture>
+  <Texture Map="Specular" File="textures/terrain/ground/grass_tt_spec.dds"/>
+  <Texture Map="Bumpmap" File="textures/terrain/ground/grass_tt_ddn.dds">
+   <TexMod TileU="0.60000002" TileV="0.60000002"/>
+  </Texture>
+ </Textures>
+ <PublicParams SpecMapChannelB="0" SpecMapChannelR="0" FresnelPower="5" GlossMapChannelB="0" SpecMapChannelG="0" FresnelScale="22.5" FresnelBias="0.34999999" IndirectColor="0.24680044,0.24680044,0.24680044"/>
+</Material>

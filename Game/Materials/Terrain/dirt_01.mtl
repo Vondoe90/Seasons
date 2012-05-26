@@ -1,0 +1,10 @@
+<Material MtlFlags="524288" Shader="Terrain.Layer" GenMask="200080000" StringGenMask="%GLOSS_MAP%TEMP_TERRAIN" SurfaceType="mat_soil" MatTemplate="" Diffuse="1,1,1" Specular="0.00043367624,0.00043367624,0.00043367624" Emissive="0,0,0" Shininess="80" Opacity="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain/ground/dirt_tt_diff.dds">
+   <TexMod TileU="0.5" TileV="0.5"/>
+  </Texture>
+  <Texture Map="Specular" File="textures/terrain/ground/dirt_tt_spec.dds"/>
+  <Texture Map="Bumpmap" File="textures/terrain/ground/dirt_tt_ddn.dds"/>
+ </Textures>
+ <PublicParams FresnelPower="5" DetailTextureStrength="0.30000001" FresnelScale="22.5" FresnelBias="0.34999999" IndirectColor="0.24680044,0.24680044,0.24680044"/>
+</Material>
