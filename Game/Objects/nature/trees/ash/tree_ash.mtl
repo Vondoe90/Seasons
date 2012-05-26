@@ -1,6 +1,6 @@
 <Material MtlFlags="524544">
  <SubMaterials>
-  <Material Name="branch" MtlFlags="524416" Shader="Vegetation" GenMask="400C01020" StringGenMask="%BLENDLAYER%DETAIL_BENDING%LEAVES%MERGED_TEXTURES%TEMP_VEGETATION" SurfaceType="mat_grass" MatTemplate="" Diffuse="0.50543249,0.50543249,0.50543249" Specular="0.063814871,0.063814871,0.063814871" Emissive="0,0,0" Shininess="10" Opacity="1" AlphaTest="0.25">
+  <Material Name="branch" MtlFlags="524416" Shader="Vegetation" GenMask="400C01020" StringGenMask="%BLENDLAYER%DETAIL_BENDING%LEAVES%MERGED_TEXTURES%TEMP_VEGETATION" SurfaceType="mat_grass" MatTemplate="" Diffuse="0.25084025,0.25084025,0.25084025" Specular="0.063814871,0.063814871,0.063814871" Emissive="0,0,0" Shininess="10" Opacity="1" AlphaTest="0.25">
    <Textures>
     <Texture Map="Diffuse" File="objects/nature/trees/ash/textures/ash_branch_spring_diff.dds"/>
     <Texture Map="Specular" File="objects/nature/trees/ash/textures/ash_branch_spec.dds"/>
