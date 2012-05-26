@@ -22,7 +22,6 @@
 *.manifest
 *.lastbuildstate
 *.pch
-*.rc
 
 # Various
 [Tt]emp
