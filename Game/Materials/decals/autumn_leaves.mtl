@@ -1,0 +1,7 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="100000000" StringGenMask="%TESSELLATION" SurfaceType="" MatTemplate="" Diffuse="0.20835964,0.20835964,0.20835964" Specular="0.0028991185,0.0028991185,0.0028991185" Emissive="0,0,0" Shininess="20" Opacity="1" AlphaTest="0.63">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain/ground/leaves_dt_diff.dds" IsTileU="0" IsTileV="0"/>
+  <Texture Map="Bumpmap" File="textures/terrain/ground/leaves_dt_ddn.dds"/>
+ </Textures>
+ <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.096266121,0.096266121,0.096266121"/>
+</Material>

@@ -1,0 +1,11 @@
+<Material MtlFlags="524544">
+ <SubMaterials>
+  <Material Name="grass" MtlFlags="524416" Shader="Vegetation" GenMask="400200000" StringGenMask="%GRASS%TEMP_VEGETATION" SurfaceType="mat_grass" MatTemplate="" Diffuse="0.35865393,0.35865393,0.35865393" Specular="0.063814871,0.063814871,0.063814871" Emissive="0,0,0" Shininess="10" Opacity="1" AlphaTest="0.44999999">
+   <Textures>
+    <Texture Map="Diffuse" File="objects/nature/grass/textures/grass_diff.dds"/>
+   </Textures>
+   <PublicParams bendDetailLeafAmplitude="1" BackShadowBias="0.5" FresnelPower="4" bendDetailFrequency="2" bendDetailBranchAmplitude="3" blendWithTerrainAmount="0.5" FresnelScale="1" FresnelBias="1" BackViewDep="0.1" BackDiffuseMultiplier="0.1" BackDiffuse="0.24279638,0.26317474,0.19046287" IndirectColor="0.24680044,0.24680044,0.24680044"/>
+  </Material>
+ </SubMaterials>
+ <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.25,0.25,0.25"/>
+</Material>
