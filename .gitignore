@@ -44,3 +44,6 @@ Editor/EditorLayout.xml
 error.bmp
 
 !Engine/Mono/Bin
+
+*.bak
+*.bak2
