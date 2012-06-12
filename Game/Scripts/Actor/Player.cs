@@ -7,7 +7,7 @@ namespace CryGameCode.Actors
 	{
 		public void Init()
 		{
-			View.Active.FoV = Math.DegreesToRadians(60);
+			View.Active.FieldOfView = Math.DegreesToRadians(60);
 		}
 	}
 }
