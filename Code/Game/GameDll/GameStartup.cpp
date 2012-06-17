@@ -163,9 +163,6 @@ CGameStartup::CGameStartup()
 
 CGameStartup::~CGameStartup()
 {
-	if(m_pCryMono)
-		m_pCryMono->Release();
-
 	if (m_pMod)
 	{
 		m_pMod->Shutdown();
@@ -238,8 +235,6 @@ IGameRef CGameStartup::Init(SSystemInitParams &startupParams)
 	}
 
 	LOADING_DONE;
-
-	m_pCryMono->PostInit();
 
 	// should be after init game (should be executed even if there is no game)
 	if(startupParams.bExecuteCommandLine)

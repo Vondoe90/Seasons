@@ -80,6 +80,11 @@ public:
 	/// </summary>
 	virtual void SetField(const char *fieldName, IMonoObject *pNewValue) = 0;
 
+	/// <summary>
+	/// Gets the current instance as a mono object, to be able to pass it directly to .NET.
+	/// </summary>
+	virtual mono::object GetInstance() = 0;
+
 	template <typename TResult>
 	static TResult CallMethod(IMonoClass *pClass, const char *funcName, IMonoArray *pArgs = NULL, bool releaseArgs = false)
 	{
