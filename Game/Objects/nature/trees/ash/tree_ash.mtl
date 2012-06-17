@@ -1,6 +1,6 @@
 <Material MtlFlags="524544">
  <SubMaterials>
-  <Material Name="branch" MtlFlags="524416" Shader="Vegetation" GenMask="400C01020" StringGenMask="%BLENDLAYER%DETAIL_BENDING%LEAVES%MERGED_TEXTURES%TEMP_VEGETATION" SurfaceType="mat_grass" MatTemplate="" Diffuse="0.25084025,0.25084025,0.25084025" Specular="0.063814871,0.063814871,0.063814871" Emissive="0,0,0" Shininess="10" Opacity="1" AlphaTest="0.25">
+  <Material Name="branch" MtlFlags="524416" Shader="Vegetation" GenMask="400C01020" StringGenMask="%BLENDLAYER%DETAIL_BENDING%LEAVES%MERGED_TEXTURES%TEMP_VEGETATION" SurfaceType="mat_grass" MatTemplate="" Diffuse="0.21204439,0.39408314,0.40454084" Specular="0.063814871,0.063814871,0.063814871" Emissive="0,0,0" Shininess="10" Opacity="1" AlphaTest="0.25">
    <Textures>
     <Texture Map="Diffuse" File="objects/nature/trees/ash/textures/ash_branch_spring_diff.dds"/>
     <Texture Map="Specular" File="objects/nature/trees/ash/textures/ash_branch_spec.dds"/>
@@ -9,9 +9,9 @@
     <Texture Map="Custom" File="objects/nature/trees/ash/textures/ash_branch_autumn_diff.dds"/>
     <Texture Map="[1] Custom" File="objects/nature/trees/ash/textures/ash_branch_ddn.dds"/>
    </Textures>
-   <PublicParams BlendFalloff="10" bendDetailLeafAmplitude="1" BackShadowBias="0.40000001" FresnelPower="4" bendDetailFrequency="2" bendDetailBranchAmplitude="3" BlendLayer2Tiling="1" FresnelScale="1" FresnelBias="1" CapOpacityFalloff="1" BackViewDep="0.1" BackDiffuseMultiplier="0.5" BackDiffuse="0.50543249,0.50543249,0.50543249" BlendFactor="0" IndirectColor="0.24680044,0.24680044,0.24680044"/>
+   <PublicParams BlendFalloff="10" bendDetailLeafAmplitude="1" BackShadowBias="0.292" FresnelPower="4" bendDetailFrequency="2" bendDetailBranchAmplitude="3" BlendLayer2Tiling="1" FresnelScale="1" FresnelBias="1" CapOpacityFalloff="1" BackViewDep="0.259" BackDiffuseMultiplier="2.1259999" BackDiffuse="0.25902736,0.25902736,0.25902736" BlendFactor="0" IndirectColor="0.24680044,0.24680044,0.24680044"/>
   </Material>
-  <Material Name="bark" MtlFlags="524416" Shader="Illum" GenMask="100000000" StringGenMask="%TESSELLATION" SurfaceType="mat_wood" MatTemplate="" Diffuse="0.44787085,0.44787085,0.44787085" Specular="0,0,0" Emissive="0,0,0" Opacity="1">
+  <Material Name="bark" MtlFlags="524416" Shader="Illum" GenMask="100000000" StringGenMask="%TESSELLATION" SurfaceType="mat_wood" MatTemplate="" Diffuse="0.20835964,0.20835964,0.20835964" Specular="0,0,0" Emissive="0,0,0" Opacity="1">
    <Textures>
     <Texture Map="Diffuse" File="objects/nature/trees/ash/textures/ash_bark_summer_diff.dds"/>
     <Texture Map="Bumpmap" File="objects/nature/trees/ash/textures/ash_bark_summer_ddn.dds"/>

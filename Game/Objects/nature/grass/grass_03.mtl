@@ -1,12 +1,10 @@
 <Material MtlFlags="524544">
  <SubMaterials>
-  <Material Name="grass" MtlFlags="524416" Shader="Vegetation" GenMask="400800000" StringGenMask="%LEAVES%TEMP_VEGETATION" SurfaceType="mat_grass" MatTemplate="" Diffuse="0.15415226,0.23099814,0.14198029" Specular="0.037028514,0.056374099,0.030256517" Emissive="0,0,0" Shininess="10" Opacity="1" AlphaTest="0.5">
+  <Material Name="grass" MtlFlags="524416" Shader="Vegetation" GenMask="400200000" StringGenMask="%GRASS%TEMP_VEGETATION" SurfaceType="mat_grass" MatTemplate="" Diffuse="0.50543249,0.50543249,0.50543249" Specular="0,0,0" Emissive="0,0,0" Shininess="10" Opacity="1" AlphaTest="0.31999999">
    <Textures>
     <Texture Map="Diffuse" File="objects/nature/grass/textures/grass_diff.dds"/>
-    <Texture Map="Specular" File="objects/nature/grass/textures/grass_spec.dds"/>
-    <Texture Map="Bumpmap" File="objects/nature/grass/textures/grass_ddn.dds"/>
    </Textures>
-   <PublicParams bendDetailLeafAmplitude="1" BackShadowBias="0.44999999" FresnelPower="4" bendDetailFrequency="2" bendDetailBranchAmplitude="3" FresnelScale="1" FresnelBias="1" CapOpacityFalloff="1" BackViewDep="0.30000001" BackDiffuseMultiplier="0.64999998" BackDiffuse="0.20109573,0.38377467,0.13609855" IndirectColor="0.24680044,0.24680044,0.24680044"/>
+   <PublicParams bendDetailLeafAmplitude="1" BackShadowBias="0.89999998" FresnelPower="4" bendDetailFrequency="2" bendDetailBranchAmplitude="3" blendWithTerrainAmount="0.5" FresnelScale="1" FresnelBias="1" BackViewDep="0.69999999" BackDiffuseMultiplier="2" BackDiffuse="0.18354899,0.56049919,0.034230206" IndirectColor="0.24680044,0.24680044,0.24680044"/>
   </Material>
  </SubMaterials>
  <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.25,0.25,0.25"/>
