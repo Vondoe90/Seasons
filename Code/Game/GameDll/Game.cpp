@@ -521,6 +521,8 @@ bool CGame::CompleteInit()
 	DumpMemInfo("CGame::CompleteInit");
 #endif
 
+	gEnv->pMonoScriptSystem->RegisterFlownodes();
+
 	return true;
 }
 
