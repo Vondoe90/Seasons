@@ -546,9 +546,6 @@
     <ClCompile Include="HUD\UIEntityDynTexTag.cpp">
       <Filter>HUD</Filter>
     </ClCompile>
-    <ClCompile Include="HUD\UIHUD3D.cpp">
-      <Filter>HUD</Filter>
-    </ClCompile>
     <ClCompile Include="HUD\UIInput.cpp">
       <Filter>HUD</Filter>
     </ClCompile>
@@ -1156,9 +1153,6 @@
     <ClInclude Include="HUD\UIEntityDynTexTag.h">
       <Filter>HUD</Filter>
     </ClInclude>
-    <ClInclude Include="HUD\UIHUD3D.h">
-      <Filter>HUD</Filter>
-    </ClInclude>
     <ClInclude Include="HUD\UIInput.h">
       <Filter>HUD</Filter>
     </ClInclude>
@@ -1331,8 +1325,5 @@
     </None>
     <None Include="Crysis.ico" />
     <None Include="..\Launcher\Cursor_White.cur" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="GameDll.rc" />
   </ItemGroup>
 </Project>

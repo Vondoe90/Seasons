@@ -1,7 +1,5 @@
-<Material Diffuse="1,1,1" Emissive="0,0,0" GenMask="0" MtlFlags="0" Opacity="1" Shader="SkyHDR" Shininess="10" Specular="0,0,0" SurfaceType="" >
+<Material MtlFlags="524288" Shader="SkyHDR" GenMask="1" StringGenMask="" SurfaceType="" MatTemplate="" Diffuse="1,1,1" Specular="0,0,0" Emissive="0,0,0" Shininess="10" Opacity="1">
  <Textures>
-  <Texture File="textures/defaults/16_grey.dds" Map="Diffuse" >
-   <TexMod />
-  </Texture>
+  <Texture Map="Diffuse" File="textures/defaults/16_grey.dds"/>
  </Textures>
 </Material>

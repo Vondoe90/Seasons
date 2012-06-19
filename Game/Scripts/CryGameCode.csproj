@@ -100,6 +100,7 @@
   <ItemGroup>
     <Compile Include="Actor\Player.cs" />
     <Compile Include="Entities\SpawnPoint.cs" />
+    <Compile Include="FlowNodes\Material.cs" />
     <Compile Include="GameRules\SinglePlayer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
