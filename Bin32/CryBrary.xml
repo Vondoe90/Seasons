@@ -100,7 +100,7 @@
             Gets / sets the entity flags.
             </summary>
         </member>
-        <member name="M:CryEngine.EntityBase.EntityMethods.RegisterClass(CryEngine.EntityConfig)">
+        <member name="M:CryEngine.EntityBase.EntityMethods.RegisterClass(CryEngine.Initialization.EntityRegistrationParams)">
             <summary>
             Register a new entity type.
             </summary>
@@ -129,6 +129,143 @@
         <member name="T:CryEngine.NativeActor">
             <summary>
             Used for non-CryMono actors.
+            </summary>
+        </member>
+        <member name="T:CryEngine.Async.Jobs.AsyncJob`1">
+            <summary>
+            Base class for any async job
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:CryEngine.Async.Jobs.IAsyncJob">
+            <summary>
+            An asynchronous job
+            </summary>
+        </member>
+        <member name="M:CryEngine.Async.Jobs.IAsyncJob.Update(System.Single)">
+            <summary>
+            Updates the job
+            </summary>
+            <param name="frameTime"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CryEngine.Async.Jobs.IAsyncJob.IsFinished">
+            <summary>
+            Indicates if the job has finished processing
+            </summary>
+        </member>
+        <member name="P:CryEngine.Async.Jobs.IAsyncJob.Task">
+            <summary>
+            Gets the internal Task object associated with the job
+            </summary>
+        </member>
+        <member name="M:CryEngine.Async.Jobs.AsyncJob`1.Update(System.Single)">
+            <summary>
+            Updates the job
+            </summary>
+            <param name="frameTime"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CryEngine.Async.Jobs.AsyncJob`1.Task">
+            <summary>
+            The underlying System.Threading.Tasks.Task object
+            </summary>
+        </member>
+        <member name="P:CryEngine.Async.Jobs.AsyncJob`1.IsFinished">
+            <summary>
+            Indicates if the job has finished executing
+            </summary>
+        </member>
+        <member name="T:CryEngine.Async.Awaiter">
+            <summary>
+            Class that manages all jobs (updating, removing)
+            </summary>
+        </member>
+        <member name="M:CryEngine.Async.Awaiter.OnUpdate(System.Single)">
+            <summary>
+            Updates all scheduled jobs
+            </summary>
+            <param name="frameTime"></param>
+        </member>
+        <member name="P:CryEngine.Async.Awaiter.Instance">
+            <summary>
+            Singleton instance of the awaiter
+            </summary>
+        </member>
+        <member name="P:CryEngine.Async.Awaiter.Jobs">
+            <summary>
+            A list of all jobs scheduled to be executed on the next OnUpdate call
+            </summary>
+        </member>
+        <member name="T:CryEngine.Delay">
+            <summary>
+            Utility class that provides async methods for common operations
+            </summary>
+        </member>
+        <member name="M:CryEngine.Delay.CreateTaskFromJob(CryEngine.Async.Jobs.IAsyncJob)">
+            <summary>
+            Creates a Task object from an IAsyncJob instance
+            </summary>
+            <param name="job"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CryEngine.Delay.FrameDelay(System.Int32)">
+            <summary>
+            Delays execution for a number of frames
+            </summary>
+            <param name="numFrames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CryEngine.Delay.TimeDelay(System.TimeSpan)">
+            <summary>
+            Delays execution for a supplied time amount
+            </summary>
+            <param name="delay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CryEngine.Delay.TimeDelay(System.Single)">
+            <summary>
+            Delays execution for a supplied time amount (in milliseconds)
+            </summary>
+            <param name="delayInMilliseconds"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CryEngine.Async.Jobs.FrameDelayJob">
+            <summary>
+            Delays execution for a number of frames
+            </summary>
+        </member>
+        <member name="M:CryEngine.Async.Jobs.FrameDelayJob.#ctor(System.Int32)">
+            <summary>
+            Creates an instance of the job
+            </summary>
+            <param name="numberOfFramesToWait"></param>
+        </member>
+        <member name="P:CryEngine.Async.Jobs.FrameDelayJob.FramesToWait">
+            <summary>
+            Number of frames to wait
+            </summary>
+        </member>
+        <member name="T:CryEngine.Async.Jobs.TimeDelayJob">
+            <summary>
+            Delays for a time period
+            </summary>
+        </member>
+        <member name="M:CryEngine.Async.Jobs.TimeDelayJob.#ctor(System.Single)">
+            <summary>
+            Creates an instance of the TimeDelayJob
+            </summary>
+            <param name="milliseconds"></param>
+        </member>
+        <member name="M:CryEngine.Async.Jobs.TimeDelayJob.#ctor(System.TimeSpan)">
+            <summary>
+            Creates an instance of the TimeDelayJob
+            </summary>
+            <param name="delay"></param>
+        </member>
+        <member name="P:CryEngine.Async.Jobs.TimeDelayJob.DelayInMilliseconds">
+            <summary>
+            Delay in milliseconds
             </summary>
         </member>
         <member name="M:CryEngine.Level.Load(System.String)">
@@ -250,21 +387,6 @@
             <summary>
             Convenient accessor for the raw time value
             </summary>
-        </member>
-        <member name="M:CryEngine.Extensions.WinFormsExtensions.Append(System.Windows.Forms.TextBoxBase,System.String,System.Object[])">
-            <summary>
-            Appends text to the current text of a text box, with formatted arguments.
-            </summary>
-            <param name="textBox"></param>
-            <param name="format"></param>
-            <param name="args"></param>
-        </member>
-        <member name="M:CryEngine.Extensions.WinFormsExtensions.NewLine(System.Windows.Forms.TextBoxBase,System.Int32)">
-            <summary>
-            Appends a number of Environment.NewLine strings to the current text of a text box.
-            </summary>
-            <param name="textBox"></param>
-            <param name="count"></param>
         </member>
         <member name="P:CryEngine.FlowNodeAttribute.Name">
             <summary>
@@ -390,6 +512,21 @@
             <summary>
             </summary>
             <param name="delay">The desired delay, in milliseconds.</param>
+        </member>
+        <member name="M:CryEngine.Extensions.WinFormsExtensions.Append(System.Windows.Forms.TextBoxBase,System.String,System.Object[])">
+            <summary>
+            Appends text to the current text of a text box, with formatted arguments.
+            </summary>
+            <param name="textBox"></param>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:CryEngine.Extensions.WinFormsExtensions.NewLine(System.Windows.Forms.TextBoxBase,System.Int32)">
+            <summary>
+            Appends a number of Environment.NewLine strings to the current text of a text box.
+            </summary>
+            <param name="textBox"></param>
+            <param name="count"></param>
         </member>
         <member name="T:CryEngine.Sandbox.SandboxExtensionAttribute">
             <summary>
@@ -742,12 +879,6 @@
             <param name="entInfo">Struct containing the IEntity pointer and EntityId.</param>
             <returns>IsEntityFlowNode</returns>
         </member>
-        <member name="M:CryEngine.Entity.IsEntityFlowNode">
-            <summary>
-            Returns true if this entity contains input or output ports.
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:CryEngine.Entity.OnRemove">
             <summary>
             Called when the entity is being removed.
@@ -801,11 +932,6 @@
             <param name="dir"></param>
             <param name="materialId"></param>
             <param name="contactNormal"></param>
-        </member>
-        <member name="M:CryEngine.Entity.OnHit(CryEngine.HitInfo)">
-            <summary>
-            
-            </summary>
         </member>
         <member name="M:CryEngine.Entity.OnInit">
             <summary>
@@ -5157,11 +5283,27 @@
             Returns the absolute time of the last frame start in milliseconds.
             </summary>
         </member>
+        <member name="P:CryEngine.Time.AsyncTime">
+            <summary>
+            Returns the absolute current time.
+            Note: The value continuously changes, slower than GetFrameStartTime().
+            </summary>
+        </member>
         <member name="P:CryEngine.Time.DeltaTime">
             <summary>
             The time used to render the current frame. Useful for creating framerate independent operations.
             </summary>
-            <example>public override void OnUpdate() { this.Position.X += 10 * CryTime.DeltaTime; }</example>
+            <example>public override void OnUpdate() { this.Position.X += 10 * Time.DeltaTime; }</example>
+        </member>
+        <member name="P:CryEngine.Time.TimeScale">
+            <summary>
+            Sets / gets the time scale applied to time values.
+            </summary>
+        </member>
+        <member name="P:CryEngine.Time.Framerate">
+            <summary>
+            Returns the current framerate in frames/second.
+            </summary>
         </member>
         <member name="T:CryEngine.Arduino.ArduinoHelper">
             <summary>
@@ -5204,14 +5346,14 @@
             <remarks>Useful when exceptions are caught and data is still needed from them</remarks>
             <param name="ex"></param>
         </member>
-        <member name="M:CryEngine.Debug.Warning(System.String,System.Object[])">
+        <member name="M:CryEngine.Debug.LogWarning(System.String,System.Object[])">
             <summary>
             Outputs a warning message
             </summary>
             <param name="format"></param>
             <param name="args"></param>
         </member>
-        <member name="M:CryEngine.Debug.Warning(System.String)">
+        <member name="M:CryEngine.Debug.LogWarning(System.String)">
             <summary>
             Outputs a warning message
             </summary>
@@ -5298,16 +5440,6 @@
         <member name="F:CryEngine.EntityClassFlags.Default">
             <summary>
             If this is default entity class.
-            </summary>
-        </member>
-        <member name="F:CryEngine.EntityConfig.registerParams">
-            <summary>
-            The registration information.
-            </summary>
-        </member>
-        <member name="F:CryEngine.EntityConfig.properties">
-            <summary>
-            The properties that will be displayed inside Sandbox.
             </summary>
         </member>
         <member name="M:CryEngine.FlowNode.OnPortActivated(System.Int32,System.Object)">
@@ -5501,101 +5633,6 @@
         <member name="F:CryEngine.DisconnectionCause.Unknown">
             <summary>
             Unknown cause
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.ShooterId">
-            <summary>
-            EntityId of the shooter
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.TargetId">
-            <summary>
-            EntityId of the target which got shot
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.WeaponId">
-            <summary>
-            EntityId of the weapon
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.ProjectileId">
-            <summary>
-            0 if hit was not caused by a projectile
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.Damage">
-            <summary>
-            damage count of the hit
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.Radius">
-            <summary>
-            radius of the hit
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.MaterialId">
-            <summary>
-            material id of the surface which got hit
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.TypeId">
-            <summary>
-            type id of the hit, see IGameRules::GetHitTypeId for more information
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.BulletType">
-            <summary>
-            type of bullet, if hit was of type bullet
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.Pierceability">
-            <summary>
-            bullet pierceability
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.Position">
-            <summary>
-            position of the hit
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.Direction">
-            <summary>
-            direction of the hit
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.Aimed">
-            <summary>
-            set to true if shot was aimed - i.e. first bullet, zoomed in etc.
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.KnocksDown">
-            <summary>
-            true if the hit should knockdown
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.KnocksDownLeg">
-            <summary>
-            true if the hit should knockdown when hit in a leg
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.HitViaProxy">
-            <summary>
-            true if the 'shooter' didn't actually shoot, ie. a weapon acting on their behalf did (team perks)
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.Explosion">
-            <summary>
-            true if this hit directly results from an explosion
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.ArmorHeating">
-            <summary>
-            dynamic pierceability reduction
-            </summary>
-        </member>
-        <member name="P:CryEngine.HitInfo.PenetrationCount">
-            <summary>
-            number of surfaces the bullet has penetrated
             </summary>
         </member>
         <member name="T:CryEngine.Utilities.CryStats">
@@ -6401,35 +6438,13 @@
             <returns>The filepath to the Scripts folder as a string, ex:
             <example>"C:\CryENGINE3\Game\Scripts"</example></returns>
         </member>
-        <member name="M:CryEngine.Initialization.ScriptManager.LoadLibrariesInFolder(System.String)">
-            <summary>
-            This function will automatically scan for C# dll (*.dll) files and load the types contained within them.
-            </summary>
-        </member>
-        <member name="M:CryEngine.Initialization.ScriptManager.ProcessAssembly(System.Reflection.Assembly)">
-            <summary>
-            Processes a C# assembly and adds all found types to ScriptCompiler.CompiledScripts
-            </summary>
-        </member>
         <member name="M:CryEngine.Initialization.ScriptManager.LoadAssembly(System.String)">
             <summary>
             Loads a C# assembly by location, creates a shadow-copy and generates debug database (mdb).
             </summary>
             <param name="assemblyPath"></param>
         </member>
-        <member name="M:CryEngine.Initialization.ScriptManager.ProcessType(System.Type)">
-            <summary>
-            Adds the type to CompiledScripts
-            </summary>
-            <param name="type"></param>
-        </member>
-        <member name="M:CryEngine.Initialization.ScriptManager.ProcessMembers(System.Type)">
-            <summary>
-            Processes all members of a type for CryMono features such as CCommands.
-            </summary>
-            <param name="type"></param>
-        </member>
-        <member name="M:CryEngine.Initialization.ScriptManager.OnUpdate(System.Single)">
+        <member name="M:CryEngine.Initialization.ScriptManager.OnUpdate(System.Single,System.Single,System.Single,System.Single,System.Single)">
             <summary>
             Called once per frame.
             </summary>

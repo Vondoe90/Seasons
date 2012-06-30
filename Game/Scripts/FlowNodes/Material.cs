@@ -100,19 +100,19 @@ namespace CryGameCode
 		[Port(Name = "Shininess")]
 		public OutputPort<float> ShininessOutput { get; set; }
 
-		[Port]
+		[Port(Type = PortType.Color)]
 		public void DiffuseColor(Vec3 value) { }
 
 		[Port(Name = "DiffuseColor")]
 		public OutputPort<Vec3> DiffuseColorOutput { get; set; }
 
-		[Port]
+		[Port(Type = PortType.Color)]
 		public void EmissiveColor(Vec3 value) { }
 
 		[Port(Name = "EmissiveColor")]
 		public OutputPort<Vec3> EmissiveColorOutput { get; set; }
 
-		[Port]
+		[Port(Type = PortType.Color)]
 		public void SpecularColor(Vec3 value) { }
 
 		[Port(Name = "SpecularColor")]

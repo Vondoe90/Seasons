@@ -1221,7 +1221,7 @@ protected:
 
 	CCinematicInput			m_cinematicInput;
 
-	IMonoClass *m_pScriptClass;
+	IMonoObject *m_pScript;
 };
 
 #define NOTIFY_UI_MP( fct ) { \
