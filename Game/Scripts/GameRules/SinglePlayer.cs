@@ -1,9 +1,5 @@
 using CryEngine;
-using CryGameCode.Entities;
 using CryGameCode.Actors;
-
-using System.Collections.Generic;
-using System.Linq;
 
 /// <summary>
 /// The campaign game mode is the base game mode

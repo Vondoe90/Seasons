@@ -43,10 +43,14 @@ namespace CryGameCode.Testing
 			Assert.IsTrue(false);
 		}
 
-		// This will die hard in unmanaged code, CScriptClass::CallMethod, before the exception handler has a chance
-		// Nice test of IgnoreTestAttribute though!
 		[IgnoreTest]
 		[Test("Intentionally ignored", "This is an example of a test that isn't executed.")]
+		public void Ignored()
+		{
+
+		}
+
+		[Test("Null reference", "This should throw a null reference exception.")]
 		public void NullRef()
 		{
 			object obj = null;

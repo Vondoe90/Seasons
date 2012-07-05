@@ -240,6 +240,7 @@
       <PreprocessorDefinitions>GAMEDLL_EXPORTS;PROFILE;_PROFILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalDependencies>netapi32.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>

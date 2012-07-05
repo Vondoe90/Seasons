@@ -58,7 +58,7 @@ void CGameRules::ClientHit(const HitInfo &hitInfo)
 	if(pActor == pClientActor)
 		if (gEnv->pInput) gEnv->pInput->ForceFeedbackEvent( SFFOutputEvent(eDI_XI, eFF_Rumble_Basic, 0.5f * hitInfo.damage * 0.01f, hitInfo.damage * 0.02f, 0.0f));
 
-	//CallMonoScript<void>(m_pScript, "OnHit", gEnv->pMonoScriptSystem->GetConverter()->ToManagedType(eCMT_HitInfo, &const_cast<HitInfo &>(hitInfo)));
+	//m_pScript->CallMethod( "OnHit", gEnv->pMonoScriptSystem->GetConverter()->ToManagedType(eCMT_HitInfo, &const_cast<HitInfo &>(hitInfo)));
 
 	bool backface = hitInfo.dir.Dot(hitInfo.normal)>0;
 	if (!hitInfo.remote && hitInfo.targetId && !backface)
@@ -902,7 +902,7 @@ IMPLEMENT_RMI(CGameRules, ClSetTeam)
 			m_pRadio->SetTeam(GetTeamName(params.teamId));
 	}
 
-	CallMonoScript<void>(m_pScript, "OnSetTeam", params.entityId, params.teamId);
+	m_pScript->CallMethod( "OnSetTeam", params.entityId, params.teamId);
 
 	return true;
 }
